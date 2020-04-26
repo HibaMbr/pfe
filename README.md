@@ -32,6 +32,7 @@ Create a new branch locally (de lien contient une explication de comment collabo
 
 #### $ git checkout [brach-name]
 Work on an existing brach locally
+NB: Theese last two steps can be merged in one commande: $git checkout -b [branch-name]
 
 
 
