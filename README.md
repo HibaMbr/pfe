@@ -5,7 +5,9 @@ Had la partie qui s'apelle #README.md# ne9edro neketbo fiha wach n7abbo pour fai
 - Avant de faire aucun changement, tu as deux choix :
   * Soit tu crée une nouvelle brache et tu travaille sur la partie du projet que tu veux faire.
   * Ou tu travail sur un brache que t'as déjà créé mais makemeltich l 5edma 3liha.
-- Après avoir terminer le travail sur une brache et la personne veux faire un "merge" dans la branche principale qui s'appelle "master brache", on fait un pull request pour que l'autre personne pour voir le progrés et etre au courant du nouveau changement.
+- Après avoir terminer le travail sur une brache et la personne veux faire un "merge" dans la branche principale qui s'appelle "master brache", on fait un pull request pour que l'autre personne puisse etre au courant des changements.
+- Pull requests are used to notify the other contributer of changes pushed to the repository.
+
 
 ## Commande dont on aura besion 
 #### $ git clone <lien http du repository>
