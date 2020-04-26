@@ -18,9 +18,11 @@ body {
     -o-background-size:cover;
     background-size: cover;
 }
+/*
 a:active{
     font-size: larger;
 }
+*/
 .porfolio-item{
     margin-bottom: 30px;
 }
@@ -55,3 +57,39 @@ a:active{
     border-color: #000080;
 }
 */
+
+img#prochainesession{
+    width: 350px;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+    -webkit-appearance: button;
+    border: none;
+    width: 320px;
+    height: 45px;
+    margin-top: 20px;
+    color: white;
+    font-size: 1.6em;
+}
+
+button:hover {
+    background: #09568d;
+}
+
+/*.m-0 {
+    font-weight: 2em;
+}
+*/
+
+.text-white {
+    color: #fff!important;
+    font-weight: bold;
+    /*font-size: 0.9em;*/
+}
