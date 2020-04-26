@@ -32,3 +32,8 @@ Create a new branch locally (de lien contient une explication de comment collabo
 
 #### $ git checkout [brach-name]
 Work on an existing brach locally
+
+
+
+
+PS: La syntaxe de l'écriture d'un fichier README est dans le site https://daringfireball.net/projects/markdown/syntax 
