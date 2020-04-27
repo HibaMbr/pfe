@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Costum CSS -->
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/sideNav.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <title>Geni Soft Ecole | Accueil</title>
+
+</head>
+
+<body>
+
+  <!-- Start Navigation -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+
+    <!-- Start Container -->
+    <div class="container">
+
+      <!-- Nav Brand -->
+      <a href="index.html" class="navbar-brand">Geni Soft Ecole</a>
+
+      <!-- Start Button -->
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggler="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggle-icon"></span>
+      </button>
+      <!-- Fin Button -->
+
+      <!-- Start Links -->
+      <div class="collapse navbar-collapse" id="navbar-responsive">
+        <ul class="navbar-nav ml-auto">
+
+          <!-- ACCUEIL -->
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link">Accueil</a>
+          </li>
+
+          <!-- A PROPOS -->
+          <li class="nav-item">
+            <a href="services.html" class="nav-link">A propos</a>
+          </li>
+
+          <!-- NOS FORMATIONS -->
+          <li class="nav-item">
+            <a class="nav-link" style="cursor:pointer" onclick="openNav()">Nos Formations</a>
+          </li>
+
+          <!-- COURS DE LANGUES -->
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">Cours de Langues</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+
+        </ul>
+
+      </div>
+      <!-- End Links -->
+
+    </div>
+    <!-- End Container -->
+
+  </nav>
+  <!-- End Navigation -->
+
+  <!-- Start side nav -->
+
+  <div id="mySidenav" class="sidenav">
+    <input type="text" id="mySearch" onkeyup="searchFunction()" placeholder="Search.." title="Type in a category">
+    <ul  id="myMenu">
+
+        <li><a href="" class="title">Bureautique pack</a></li>
+            <li><a href="#">Windows Initiation</a></li>
+            <li><a href="#">MS Word initiation</a></li>
+            <li><a href="#">MS Excel Initiation</a></li>
+            <li><a href="#">MS Word perfectionnement</a></li>
+            <li><a href="#">MS Excel perfectionnement</a></li>
+            <li><a href="#">MS Power Point</a></li>
+
+        <li><a href="" class="title">Développement</a></li>
+            <li><a href="">PHP</a></li>
+            <li><a href="">MySQL</a></li>
+            <li><a href="">CSS</a></li>
+            <li><a href="">HTML</a></li>
+            <li><a href="">JavaScript</a></li>
+            <li><a href="">Java</a></li>
+            <li><a href="">C</a></li>
+            <li><a href="">Delphi</a></li>
+
+        <li><a href="" class="title">Microsoft servers</a></li>
+            <li><a href="">Windows server</a></li>
+            <li><a href="">SQL Server</a></li>
+            <li><a href="">Exchange Server</a></li>
+            <li><a href="">ISA server / Forefront TMG</a></li>
+
+        <li><a href="" class="title">Microsoft Office</a></li>
+            <li><a href="#">MS Excel Niveau 1</a></li>
+            <li><a href="#">MS Excel Niveau 2</a></li>
+            <li><a href="#">MS Excel Niveau 3</a></li>
+            <li><a href="#">VBA Excel</a></li>
+            <li><a href="#">MS Access initiation</a></li>
+            <li><a href="#">MS Access perfectionnement</a></li>
+            <li><a href="#">MS Outlook</a></li>
+            <li><a href="#">MS Visio</a></li>
+            <li><a href="#">MS Project</a></li>
+
+        <li><a href="" class="title">Logiciels d'architecture DAO</a></li>
+            <li><a href="">Autocad 2D</a></li>
+            <li><a href="">Autocad 3D</a></li>
+            <li><a href="">Sketchup</a></li>
+
+        <li><a href="" class="title">Infographie</a></li>
+            <li><a href="#">Photoshop</a></li>
+            <li><a href="#">In Design</a></li>
+            <li><a href="#">Illustrator</a></li>
+
+        <li><a href="" class="title">Langues</a></li>
+            <li><a href="">Anglais américain</a></li>
+            <li><a href="">Français</a></li>
+
+        <li><a href="" class="title">Autre</a></li>
+            <li><a href="">Formation Réseaux</a></li>
+            <li><a href="">Formation Maintenance PC</a></li>
+        
+        <li><a href="" class="title">Formation Diplomantes</a></li>
+            <li><a href="#">TS en Informatique option SI</a></li>
+            <li><a href="#">Exploitant Informatique</a></li>
+    </ul>
+</div>
+
+<!-- END side nav -->
+
+  <!-- Optional JavaScript -->
+  <script>
+   
+
+    function searchFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("mySearch");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myMenu");
+    li = ul.getElementsByTagName("li");
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+        } else {
+        li[i].style.display = "none";
+        }
+    }
+    }
+  </script>
+</body>
+
+</html>
