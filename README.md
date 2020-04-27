@@ -37,5 +37,7 @@ NB: Theese last two steps can be merged in one commande: $git checkout -b [branc
 #### $ git tag [tag-name] [branch-name where I want to create the tag]
 So in this case the tag I created will be associated with the latest commit on the branch I've chosen 
 
+#### $ git clone [wiki-link-copied-from-GitHub]
+So basicaly we can clone a wiki as a repository in our local machine, and it'll also contain the .md files that we can edite (So we can work with a wiki as if it was a regular repository) 
 
 PS: La syntaxe de l'écriture d'un fichier README est dans le site https://daringfireball.net/projects/markdown/syntax 
