@@ -34,7 +34,8 @@ Create a new branch locally (de lien contient une explication de comment collabo
 Work on an existing brach locally
 NB: Theese last two steps can be merged in one commande: $git checkout -b [branch-name]
 
-
+#### $ git tag [tag-name] [branch-name where I want to create the tag]
+So in this case the tag I created will be associated with the latest commit on the branch I've chosen 
 
 
 PS: La syntaxe de l'écriture d'un fichier README est dans le site https://daringfireball.net/projects/markdown/syntax 
