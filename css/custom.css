@@ -2,6 +2,14 @@
 body {
     padding-top: 54px;
 }
+
+@media (min-width: 768px){
+.d-md-block {
+    display: block!important;
+    top: 50px;
+    text-align: left;
+    font-size: xx-large;
+}
 /*
 @media (min-width: 992px) {
     body{
@@ -10,7 +18,7 @@ body {
 }
 */
 .carousel-item {
-    height: 65vh;
+    height: 75vh;
     min-height: 300px;
     background: no-repeat center center scroll;
     -webkit-background-size: cover;
@@ -18,53 +26,47 @@ body {
     -o-background-size:cover;
     background-size: cover;
 }
-/*
-a:active{
-    font-size: larger;
-}
-*/
+
 .porfolio-item{
     margin-bottom: 30px;
 }
+
 /* End Global Styles */
+
+/*
+*************************************************************************************************************************
+                                    Debut Page d'Accueil
+*************************************************************************************************************************
+*/
 
 /* Navigation Background color */
 .bg-dark {
     background-color: rgba(0, 59, 100) !important;
 }
 
+/* Navigation Links Color */
 .navbar-dark .navbar-nav .nav-link {
     color: rgba(255,255,255,.6);
-    padding-right: .7rem;
+    padding-right: .9rem;
     padding-left: .7rem;
 }
 
-/* Call to Action Button Hover State */
-
-/*.btn-secondary:hover {
-    color: #fff;
-    background-color: #000080;
-    border-color: #000080;
+/* Navigation Links Hover */
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.95);
 }
-*/
 
-
-/* Button Hover State */
-
-/*.btn-primary:hover {
-    color: #fff;
-    background-color: #000080;
-    border-color: #000080;
+/* Slides Section*/
+h2.slideh{
+    font-size: 1.5em;
 }
-*/
 
-img#prochainesession{
-    width: 350px;
+h1, h2, h4, h6 {
+    font-size: 2.rem;
+    font-weight: bold;
 }
 
 h4 {
-    font-size: 1.5rem;
-    font-weight: bold;
     margin: 20px 0px;
 }
 
@@ -73,23 +75,28 @@ button:not(:disabled) {
     -webkit-appearance: button;
     border: none;
     width: 320px;
-    height: 45px;
+    height: 53px;
     margin-top: 20px;
     color: white;
     font-size: 1.6em;
 }
 
-button:hover {
-    background: #09568d;
-}
-
-/*.m-0 {
-    font-weight: 2em;
-}
-*/
-
 .text-white {
     color: #fff!important;
     font-weight: bold;
-    /*font-size: 0.9em;*/
 }
+
+/* Next Sessions section */
+img#prochainesession{
+    width: 350px;
+}
+
+a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
+    background-color: #09568d!important;
+}
+
+/*
+*************************************************************************************************************************
+                                            Fin Page d'Accueil
+*************************************************************************************************************************
+*/
