@@ -6,14 +6,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <!-- Costum CSS -->
   <link rel="stylesheet" type="text/css" href="css\custom.css">
 
-  <title>Geni Soft Ecole | Contact</title>
+  <title>Contact | Geni Soft Ecole</title>
 
 </head>
 
@@ -50,11 +50,6 @@
             <a href="formations.html" class="nav-link">Nos Formations</a>
           </li>
 
-          <!-- COURS DE LANGUES -->
-          <li class="nav-item">
-            <a href="courslangues.html" class="nav-link">Cours de Langues</a>
-          </li>
-
           <!-- NOS OFFRES -->
           <li class="nav-item">
             <a href="offres.html" class="nav-link">Nos Offres</a>
@@ -77,85 +72,132 @@
   <!-- End Navigation -->
 
   <!-- Start Container -->
-    <div class="container">
+  <div class="container">
 
-        <!-- Page Title -->
-        <h1 class="mt-4 mb-3">Contact</h1>
+    <!-- Page Title -->
+    <h1 class="mt-4 mb-3">Contact</h1>
+
+    <!-- Start Breadcrumb -->
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active">Contact</li>
+    </ul>
+    <!-- End Breadcrumb -->
+
+    <!-- Content Row -->
+    <div class="row">
+      <!-- Map Column -->
+      <div class="col-lg-8 mb-4">
+        <!-- Embedded Google Map -->
+        <iframe width="100%" height="430px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="http://maps.google.com/maps?hl=fr&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+      </div>
+      <!-- Contact Details Column -->
+      <div class="col-lg-4 mb-4">
+        <h3>Details</h3>
         
-        <!-- Start Breadcrumb -->
-        <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-            <li class="breadcrumb-item active">Contact</li>
-        </ul>
-        <!-- End Breadcrumb -->
+        <h5>Siège Social : Alger</h5>
+        <p>Résidence El-Mansour Chevalley-Alger
+          <br> 0555 62 75 14 &nbsp;&nbsp;&nbsp;
+          023 25 34 86
+          <br> 023 25 34 87 &nbsp;&nbsp;&nbsp;
+          023 25 34 88
+        </p>
 
-        <!-- Contact Form -->
-        <div class="row">
-            <div class="col-lg-8 mb-4">
-                <h4>Envoyer-nous un message</h4>
-                <p>N’hésitez pas à nous contacter pour toute demande d’informations</p>
-                <br>
-                <form name="sentMessage" id="contactForm" novalidate>
-                    
-                    <div class="contron-group form-group">
-                        <div class="controls">
-                            <label>Nom Complet:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please Enter Your Name">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contron-group form-group">
-                        <div class="controls">
-                            <label>Address Email:</label>
-                            <input type="text" class="form-control" id="email" required data-validation-required-message="Please Enter Your Email Address">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
+        <h5>Chlef</h5>
+        <p>C.I.A des Citroniers Bloc A-Chlef
+          <br>027 77 80 09 &nbsp;&nbsp;&nbsp;
+          027 77 62 10
+        </p>
+        
+        <h5>Ain Defla</h5>
+        <p>Cité Attafi Bloc C4 Ain Defla
+          <br>027 50 81 60 &nbsp;&nbsp;&nbsp;
+          027 50 81 56
+        </p>
 
-                    <div class="contron-group form-group">
-                        <div class="controls">
-                            <label>Objet:</label>
-                            <input type="text" class="form-control" id="subject" required data-validation-required-message="Please Enter The Subject of your message">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contron-group form-group">
-                        <div class="controls">
-                            <label>Téléphone:</label>
-                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please Enter Your Phone Number">
-                            <p class="help-block"></p>
-                        </div>
-                    </div>
-                    
-                    <div class="contron-group form-group">
-                        <div class="controls">
-                            <label>Message:</label>
-                            <textarea id="message" cols="30" rows="10" class="form-control" required data-validation-required-message="Please Enter Your Message" maxlength="999" style="resize: none"></textarea>
-                        </div>
-                    </div>
-
-                    <div id="success"></div>
-                    <button type="submit" class="btn bg-dark text-white" id="sendMessageButton">Envoyer Message</button>
-
-                    <!-- btn btn-primary -->
-                </form>
-            </div>
-        </div>
-
+        <h5>Oran</h5>
+        <p>Lot 58 du Lotissement 55 Point du Jour Oran
+          <br>041 82 72 40
+        </p>
+        
+      </div>
     </div>
-    <!-- End Container -->
+    <!-- /.row -->
 
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- Contact Form -->
+    <div class="row">
+      <div class="col-lg-8 mb-4">
+        <h3>Envoyer-nous un message</h3>
+        <p>N’hésitez pas à nous contacter pour toute demande d’informations</p>
+        <br>
+        <form name="sentMessage" id="contactForm" novalidate>
+
+          <div class="contron-group form-group">
+            <div class="controls">
+              <label>Nom Complet:</label>
+              <input type="text" class="form-control" id="name" required
+                data-validation-required-message="Please Enter Your Name">
+              <p class="help-block"></p>
+            </div>
+          </div>
+
+          <div class="contron-group form-group">
+            <div class="controls">
+              <label>Address Email:</label>
+              <input type="text" class="form-control" id="email" required
+                data-validation-required-message="Please Enter Your Email Address">
+              <p class="help-block"></p>
+            </div>
+          </div>
+
+          <div class="contron-group form-group">
+            <div class="controls">
+              <label>Objet:</label>
+              <input type="text" class="form-control" id="subject" required
+                data-validation-required-message="Please Enter The Subject of your message">
+              <p class="help-block"></p>
+            </div>
+          </div>
+
+          <div class="contron-group form-group">
+            <div class="controls">
+              <label>Téléphone:</label>
+              <input type="text" class="form-control" id="name" required
+                data-validation-required-message="Please Enter Your Phone Number">
+              <p class="help-block"></p>
+            </div>
+          </div>
+
+          <div class="contron-group form-group">
+            <div class="controls">
+              <label>Message:</label>
+              <textarea id="message" cols="30" rows="10" class="form-control" required
+                data-validation-required-message="Please Enter Your Message" maxlength="999"
+                style="resize: none"></textarea>
+            </div>
+          </div>
+
+          <div id="success"></div>
+          <button type="submit" class="btn bg-dark text-white" id="sendMessageButton">Envoyer Message</button>
+
+          <!-- btn btn-primary -->
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <!-- End Container -->
+
+  <br>
+  <br>
+  <br>
+  <br>
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Geni Soft Ecole - Copyright &copy; 2020 Tous droits réservés </p>
+      <p class="m-0 text-center text-white">&copy; Copyright Geni Soft Ecole - 2020 - Tous droits réservés </p>
     </div>
   </footer>
 
