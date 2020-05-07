@@ -100,3 +100,25 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
                                             Fin Page d'Accueil
 *************************************************************************************************************************
 */
+
+
+.footer-icons{ 
+    margin-left: 45%;
+    margin-top: 20px;
+}
+
+.footer-icons a {
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	background-color:  #33383bab;
+    border-radius: 15px;
+
+	font-size: 25px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 40px;
+
+	margin-right: 3px;
+}
