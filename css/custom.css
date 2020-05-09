@@ -40,6 +40,7 @@ body {
 */
 
 /* Navigation Background color */
+
 .bg-dark {
     background-color: rgba(0, 59, 100) !important;
 }
@@ -70,18 +71,7 @@ h4 {
     margin: 20px 0px;
 }
 
-button:not(:disabled) {
-    cursor: pointer;
-    -webkit-appearance: button;
-    border: none;
-    width: 320px;
-    height: 53px;
-    margin-top: 20px;
-    color: white;
-    font-size: 1.6em;
-}
-
-.text-white {
+#logo {
     color: #fff!important;
     font-weight: bold;
 }
