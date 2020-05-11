@@ -78,3 +78,62 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+.content{
+  margin-left: 16%;
+}
+
+.desc{
+  margin-top: 3%;
+  margin-left: 22%;
+  padding: 10px;
+}
+
+.description{
+  display: inline-flex;
+}
+
+.desc hr{
+  margin-right: 5%;
+  border: 3px solid rgba(0, 59, 100);
+  border-radius: 5px;
+}
+
+.desc .title{
+  color: rgba(0, 59, 100);
+
+}
+
+.description .describe{
+  margin-right: 5%;
+  padding: 30px;
+  padding-bottom: 0%;
+  text-align: justify;
+  line-height: 30px;
+  width: 45%;
+}
+
+.description .foDispo{
+  margin-left: 5%;
+  padding: 30px;
+  text-align: justify;
+  line-height: 35px;
+}
+
+.description .foDispo h5{
+  color: rgba(0, 59, 100);
+}
+
+.description .foDispo ul{
+  margin-left: -18px;
+  list-style-image: url(../img/graduation-cap-16.png);
+}
+
+.description .foDispo ul li a{
+  color: black;
+  text-decoration: none;
+}
+
+.description .foDispo ul li a:hover{
+  color: rgba(0, 59, 100);
+}
