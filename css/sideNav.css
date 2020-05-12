@@ -120,7 +120,7 @@
   line-height: 35px;
 }
 
-.description .foDispo h5{
+.description .foDispo h5, .description .describeFormationL h5, .description .describeFormationR h5{
   color: rgba(0, 59, 100);
 }
 
@@ -136,4 +136,50 @@
 
 .description .foDispo ul li a:hover{
   color: rgba(0, 59, 100);
+}
+
+
+.description .describeFormationL{
+  line-height: 30px;
+  text-align: justify;
+  color: rgb(38, 41, 59);
+  width: 67%;
+  padding: 10px;
+  padding-right: 40px;
+  border-right: 2px solid rgba(0, 59, 100);
+}
+
+.description .describeFormationL ul li b{
+  color: rgba(0, 59, 100);
+}
+
+.description .describeFormationR{
+  line-height: 30px;
+  text-align: justify;
+  color: rgb(38, 41, 59);
+  width: 25%;
+  padding: 10px;
+  padding-left: 40px;
+}
+
+.description .describeFormationR .button{
+  display: inline-block;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: 10%;
+  margin-left: 25%;
+  border-radius: 100px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: white;
+  background-color: rgba(0, 59, 100);
+  text-align: center;
+  position: relative;
+}
+
+.description .describeFormationR .button:hover{
+  background-color: rgb(61, 49, 88);
 }
