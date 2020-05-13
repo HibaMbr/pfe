@@ -10,13 +10,7 @@ body {
     text-align: left;
     font-size: xx-large;
 }
-/*
-@media (min-width: 992px) {
-    body{
-        padding-top: 56px;
-    }
-}
-*/
+
 .carousel-item {
     height: 75vh;
     min-height: 300px;
@@ -89,4 +83,4 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 *************************************************************************************************************************
                                             Fin Page d'Accueil
 *************************************************************************************************************************
-*/
+*/ }
