@@ -19,29 +19,30 @@
 
 </head>
 
-<body>
+<body id="top">
 
   <!-- Start Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark my-bg-color fixed-top ">
+  <nav class="navbar navbar-expand-lg navbar-dark my-bg-color fixed-top " id="mainNav">
 
     <!-- Start Container -->
     <div class="container">
 
       <!-- Nav Brand -->
       <a id="logo" href="index.html" class="navbar-brand js-scroll-trigger text-white">Geni Soft Ecole</a>
+      <!-- the class navbar-brand gives the logo of our web page -->
       <!-- <a id="logo-no-bg" href="index.html"><img src="img\GS-logo-removebg-preview"></a> -->
 
-      <!-- Start Button -->
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggler="collapse"
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-        aria-label="Toggle navigation">Menu <i class="fa fa-bars"></i>
+        aria-label="Toggle navigation"><i class="fa fa-bars"></i>
+        <!-- data-target uses JQuery so when we're calling something like a target we need to put the # for the JQuery -->
         <!-- <span class="navbar-toggle-icon"></span> -->
       </button>
-      <!-- End Button -->
 
-      <!-- Start Links -->
-      <div class="collapse navbar-collapse" id="navbar-responsive">
-        <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto"> 
+          <!-- ml-auto stands for margine left auto  -->
+          <!-- we'll use the id in our JS -->
 
           <!-- ACCUEIL -->
           <li class="nav-item">
@@ -66,7 +67,6 @@
         </ul>
 
       </div>
-      <!-- End Links -->
 
     </div>
     <!-- End Container -->
@@ -192,7 +192,7 @@
   <br><br><br><br>
 
   <!-- Footer -->
-  <footer class="py-5 bg-dark"> 
+  <footer class="py-5 my-bg-color"> 
     <div class="container">
       <p class="m-0 text-center text-white">Geni Soft Ecole - Copyright &copy; 2020 Tous droits réservés</p>
     </div>
