@@ -59,12 +59,12 @@ h1, h2, h4, h6 {
     font-weight: bold;
 }
 
-h4 {
+h4.nv-session {
     margin: 20px 0px;
 }
 
 #logo {
-    color: #fff!important;
+    /* color: #fff!important; */
     font-weight: bold;
 }
 
