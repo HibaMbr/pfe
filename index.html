@@ -36,7 +36,7 @@
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation"><i class="fa fa-bars"></i>
         <!-- data-target uses JQuery so when we're calling something like a target we need to put the # for the JQuery -->
-        <!-- <span class="navbar-toggle-icon"></span> -->
+        <span class="navbar-toggle-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -50,8 +50,20 @@
           </li>
 
           <!-- NOS FORMATIONS -->
-          <li class="nav-item">
-            <a href="formations.html" class="nav-link js-scroll-trigger">Nos Formations</a>
+          <li class="nav-item dropdown">
+            <a href="formations.html" class="nav-link dropdown-toggle js-scroll-trigger" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nos Formations</a>
+            <div class="dropdown-menu" aria-labelledby="navDropdown">
+              <a href="#" class="dropdown-item">Bureautique pack</a>
+              <a href="#" class="dropdown-item">Développement</a>
+              <a href="#" class="dropdown-item">Microsoft servers</a>
+              <a href="#" class="dropdown-item">Microsoft Office</a>
+              <a href="#" class="dropdown-item">Microsoft Office</a>
+              <a href="#" class="dropdown-item">Infographie</a>
+              <a href="#" class="dropdown-item">Langues</a>
+              <a href="#" class="dropdown-item">Autre</a>
+              <div class="dropdown-devider"></div>
+              <a href="#" class="dropdown-item">Formation Diplomantes</a>
+            </div>
           </li>
 
           <!-- NOS OFFRES -->
@@ -63,6 +75,13 @@
           <li class="nav-item">
             <a href="contact.html" class="nav-link js-scroll-trigger">Contact</a>
           </li>
+
+          <form action="" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm btn-outline-info" type="text" placeholder="Recherche">
+            <button class="btn btn-outline-info my-2 my-sm-0 mx-lg-2 mx-md-1">Recherche</button>
+            <!-- 'my' stands for Margine Vertical so the margin is set to 2px -->
+            <!-- 'my-sm-0' stands for margin vertical for small size set to 0px -->
+          </form>
 
         </ul>
 
