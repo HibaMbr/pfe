@@ -40,7 +40,7 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto"> 
+        <ul class="navbar-nav ml-auto">
           <!-- ml-auto stands for margine left auto  -->
           <!-- we'll use the id in our JS -->
 
@@ -53,20 +53,7 @@
           <li class="nav-item dropdown">
             <!-- dropdown-toggle -->
             <!-- id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" -->
-            <!-- 
-              <div class="dropdown-menu" aria-labelledby="navDropdown">
-              <a href="#" class="dropdown-item">Bureautique pack</a>
-              <a href="#" class="dropdown-item">Développement</a>
-              <a href="#" class="dropdown-item">Microsoft servers</a>
-              <a href="#" class="dropdown-item">Microsoft Office</a>
-              <a href="#" class="dropdown-item">Microsoft Office</a>
-              <a href="#" class="dropdown-item">Infographie</a>
-              <a href="#" class="dropdown-item">Langues</a>
-              <a href="#" class="dropdown-item">Autre</a>
-              <div class="dropdown-devider"></div>
-              <a href="#" class="dropdown-item">Formation Diplomantes</a>
-              </div>
-             -->
+             
             <a href="formations.html" class="nav-link  js-scroll-trigger">Nos Formations</a>
           </li>
 
@@ -103,7 +90,7 @@
   <header>
 
     <!-- Start Carousel Div -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide d-none d-sm-block" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -113,7 +100,7 @@
       <div class="carousel-inner" role="listbox">
         <!-- Start First Slide -->
         <div class="carousel-item active" style="background-image: url('img/slide.jpg');">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-sm-block">
             <h2 class="slideh">L'Ecole Geni Soft</h2>
             <p><br>Une école de grande expérience dans le domaine informatique</p>
           </div>
@@ -122,7 +109,7 @@
 
         <!-- Start Second Slide -->
         <div class="carousel-item" style="background-image: url('img/slide.jpg');">
-          <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-caption d-none d-sm-block">
             <h2 class="slideh">Offres Spécials</h2>
             <p><br>Des offres spécials pour les étudiants et les clients fidèles</p>
           </div>
@@ -131,13 +118,12 @@
 
         <!-- Start Third Slide -->
         <div class="carousel-item" style="background-image: url('img/slide.jpg');">
-          <div class="carousel-caption d-none d-md-block">
-            <h2 class="slideh">Informatique ou Langues Etrangères</h2>
-            <p><br>Qu'attendez-vous! Commencez à apprendre et améliorez vos compétences dans le domaine de votre choix</p>
+          <div class="carousel-caption d-none d-sm-block">
+            <h2 class="slideh">Informatique ou Langue Etrangère</h2>
+            <p><br>Qu'attendez-vous! Commencez à apprendre et améliorez vos compétences!</p>
           </div>
         </div>
         <!-- End Third Slide -->
-
       </div>
       <!-- End Carousel Inner -->
 
@@ -166,9 +152,14 @@
   <div class="container">
     <h1 class="my-4">Présentation de l'école</h1>
 
-    <p>L'école Géni soft est une école de formation privée, agréée par l'état, affiliée à une <a href="https://www.geni-soft.com/ecole.php">entreprise</a> de renom national dont le créneau est le développement de logiciels de gestion et la création de sites Web.</p>
-    <p>Basée sur les meilleurs moyens pédagogiques et techniques, elle offre un enseignement assuré par des professeurs de haut niveau ce qui permet aux étudiants de progresser de manière remarquable dans tous les domaines proposés.</p>
-    <p>Disposant d'ateliers spécialisés, l'apprentissage qu'elle dispense offre la possibilité de progresser plus rapidement.</p>
+    <p class="text-justify">L'école Géni soft est une école de formation privée, agréée par l'état, affiliée à une <a
+        href="https://www.geni-soft.com/ecole.php">entreprise</a> de renom national dont le créneau est le développement
+      de logiciels de gestion et la création de sites Web.</p>
+    <p class="text-justify">Basée sur les meilleurs moyens pédagogiques et techniques, elle offre un enseignement assuré
+      par des professeurs de haut niveau ce qui permet aux étudiants de progresser de manière remarquable dans tous les
+      domaines proposés.</p>
+    <p class="text-justify">Disposant d'ateliers spécialisés, l'apprentissage qu'elle dispense offre la possibilité de
+      progresser plus rapidement.</p>
 
     <br><br>
 
@@ -178,33 +169,42 @@
     <div class="row">
 
       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <img id="prochainesession" src="img/html5.jpg">
+        <figure class="figure">
+          <img id="prochainesession" src="img/html5.jpg" alt="HTML5 Beginner" class="figure-img img-fluid">
+        </figure>
         <div class="text-center">
           <h4 class="nv-session">HTML5 Beginner</h4>
-          <h6> Nouvelle session Anglais Beginner Dimanche & Lundi 15h à 17h les inscriptions sont en cours soyez les Bienvenues</h6>
+          <h6> Nouvelle session Anglais Beginner Dimanche & Lundi 15h à 17h les inscriptions sont en cours soyez les
+            Bienvenues</h6>
           <button class="my-bg-color btn text-white">Savoir Plus</button>
         </div>
 
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <img id="prochainesession" src="img/css3.jpg">
+        <figure class="figure">
+          <img id="prochainesession" src="img/css3.jpg" alt="CSS3 Beginner" class="figure-img img-fluid">
+        </figure>
         <div class="text-center">
           <h4 class="nv-session">CSS3 Beginner</h4>
-          <h6>Nouvelle session Lundi le 16-12-2019 à 13H30. Inscriptions sont en cours. Soyez les Bienvenues , Lundi et mercredi 13h30 à 16h30</h6>
+          <h6>Nouvelle session Lundi le 16-12-2019 à 13H30. Inscriptions sont en cours. Soyez les Bienvenues , Lundi et
+            mercredi 13h30 à 16h30</h6>
           <button class="my-bg-color btn text-white">Savoir Plus</button>
         </div>
-        
+
       </div>
 
       <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <img id="prochainesession" src="img/js.jpg">
+        <figure class="figure">
+          <img id="prochainesession" src="img/js.jpg" alt="JS Beginner" class="figure-img img-fluid">
+        </figure>
         <div class="text-center">
           <h4 class="nv-session">JavaScript Beginner</h4>
-          <h6>Nouvelle session de la Formation JavaScript pour débutants Samedi le 30-11-2019 à 9H les inscriptions sont en cours. Soyez les Bienvenues</h6>
+          <h6>Nouvelle session de la Formation JavaScript pour débutants Samedi le 30-11-2019 à 9H les inscriptions sont
+            en cours. Soyez les Bienvenues</h6>
           <button class="my-bg-color btn text-white">Savoir Plus</button>
         </div>
-        
+
       </div>
 
     </div>
@@ -217,7 +217,7 @@
   <br><br><br><br>
 
   <!-- Footer -->
-  <footer class="py-5 my-bg-color"> 
+  <footer class="py-5 my-bg-color">
     <div class="container">
       <p class="m-0 text-center text-white">Geni Soft Ecole - Copyright &copy; 2020 Tous droits réservés</p>
     </div>

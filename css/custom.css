@@ -3,8 +3,8 @@ body {
     padding-top: 54px;
 }
 
-@media (min-width: 768px){
-    .d-md-block {
+@media (min-width: 576px){
+    .carousel-caption.d-none.d-sm-block {
         display: block!important;
         top: 50px;
         text-align: left;
