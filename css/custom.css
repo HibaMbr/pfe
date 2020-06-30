@@ -49,6 +49,11 @@ body {
     color: rgba(255,255,255,.95);
 }
 
+/* reasch button */
+::before {
+    color: rgba(255,255,255,.6);
+}
+
 /* Slides Section*/
 h2.slideh{
     font-size: 1.5em;
