@@ -13,7 +13,7 @@
 
   <!-- Costum CSS -->
   <link rel="stylesheet" type="text/css" href="css/custom.css">
-  <!-- <link rel="stylesheet" href="css/sideNav.css"> -->
+  <link rel="stylesheet" href="css/sideNav.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <title>Geni Soft Ecole | Accueil</title>
@@ -22,7 +22,79 @@
 
 <body>
 
+<!-- Start side nav -->
+    <div id="mySidenav" class="sidenav" style="display: none;"> <br><br>
+
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" >&times;</a>
+      
+      <input type="text" id="mySearch" onkeyup="searchFunction()" placeholder="Recherche.." title="Type in a category">
+      
+      <ul id="myMenu">
+
+        <li><a href="" class="title">Bureautique pack</a></li>
+        <li><a href="#">Windows Initiation</a></li>
+        <li><a href="#">MS Word initiation</a></li>
+        <li><a href="#">MS Excel Initiation</a></li>
+        <li><a href="#">MS Word perfectionnement</a></li>
+        <li><a href="#">MS Excel perfectionnement</a></li>
+        <li><a href="#">MS Power Point</a></li>
+
+        <li><a href="" class="title">Développement</a></li>
+        <li><a href="">PHP</a></li>
+        <li><a href="">MySQL</a></li>
+        <li><a href="">CSS</a></li>
+        <li><a href="">HTML</a></li>
+        <li><a href="">JavaScript</a></li>
+        <li><a href="">Java</a></li>
+        <li><a href="">C</a></li>
+        <li><a href="">Delphi</a></li>
+
+        <li><a href="" class="title">Microsoft servers</a></li>
+        <li><a href="">Windows server</a></li>
+        <li><a href="">SQL Server</a></li>
+        <li><a href="">Exchange Server</a></li>
+        <li><a href="">ISA server / Forefront TMG</a></li>
+
+        <li><a href="" class="title">Microsoft Office</a></li>
+        <li><a href="#">MS Excel Niveau 1</a></li>
+        <li><a href="#">MS Excel Niveau 2</a></li>
+        <li><a href="#">MS Excel Niveau 3</a></li>
+        <li><a href="#">VBA Excel</a></li>
+        <li><a href="#">MS Access initiation</a></li>
+        <li><a href="#">MS Access perfectionnement</a></li>
+        <li><a href="#">MS Outlook</a></li>
+        <li><a href="#">MS Visio</a></li>
+        <li><a href="#">MS Project</a></li>
+
+        <li><a href="" class="title">Logiciels d'architecture DAO</a></li>
+        <li><a href="">Autocad 2D</a></li>
+        <li><a href="">Autocad 3D</a></li>
+        <li><a href="">Sketchup</a></li>
+
+        <li><a href="" class="title">Infographie</a></li>
+        <li><a href="#">Photoshop</a></li>
+        <li><a href="#">In Design</a></li>
+        <li><a href="#">Illustrator</a></li>
+
+        <li><a href="" class="title">Langues</a></li>
+        <li><a href="">Anglais américain</a></li>
+        <li><a href="">Français</a></li>
+
+        <li><a href="" class="title">Autre</a></li>
+        <li><a href="">Formation Réseaux</a></li>
+        <li><a href="">Formation Maintenance PC</a></li>
+
+        <li><a href="" class="title">Formation Diplomantes</a></li>
+        <li><a href="#">TS en Informatique option SI</a></li>
+        <li><a href="#">Exploitant Informatique</a></li>
+      </ul>
+    </div>
+    <!-- END side nav -->
+
+
+  <div id="main">
   <!-- Start Navigation -->
+  
   <nav class="navbar navbar-expand-lg navbar-dark my-bg-color fixed-top">
 
     <!-- Start Container -->
@@ -91,96 +163,215 @@
       <li class="breadcrumb-item active">Formations</li>
     </ul>
     <!-- End Breadcrumb -->
-  </div>
+    
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <p>lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. 
+  lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. 
+  lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. 
+  lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. 
+  lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. 
+  lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. lllllllllllllllll. </p>
 
-  <!-- side nav begins -->
-  <div class="container body-content">
-    <div class="row">
-      <nav class="pdsa-sn-wrapper col-lg-3 col-md-1 col-sm-1">
-        <ul>
-          <li class="pdsa-sn-brand">
-            <a href="#">Bureautique pack</a>
-            <a href="#">Développement</a>
-            <a href="#">Microsoft servers</a>
-            <a href="#">Microsoft Office</a>
-            <a href="#">Logiciels d'architecture DAO</a>
-            <a href="#">Infographie</a>
-            <a href="#">Langues</a>
-            <a href="#">Autre</a>
-            <a href="#">Formation Diplomantes</a>
-          </li>
-        </ul>
-      </nav>
+
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Inscription</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Inscription</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form method="POST" action="preinscrit_post.php">
+              
+              <label for="name"><b>Nom:</b></label><br>
+              <input type="text" name="name" id="name" placeholder="Enter your first name" required>
+              <br><br>
+
+              <label for="lname"><b>Prénom:</b></label><br>
+              <input type="text" name="lname" id="lname" placeholder="Enter your last name" required>
+              <br><br>
+              
+              
+              <label for="gender"><b>Gender:</b></label><br> 
+              <label for="female"><b>Mme:</b></label><input type="radio" name="gender" id="mme" value="mme" checked required>&nbsp;
+              <label for="male"><b>Melle:</b></label><input type="radio" name="gender" id="melle" value="melle">&nbsp;
+              <label for="mr"><b>Mr:</b></label><input type="radio" name="gender" id="mr" value="mr"">
+              <br><br>
+              
+              <label for="dn"><b>Né(e) le:</b></label><br>
+              <input type="date" name="dn" id="dn" required>
+              <label for="ln"><b>à:</b></label>
+              <input type="text" name="ln" id="ln" required>
+              <br><br>
+              
+              <label for="adr"><b>Adresse:</b></label><br>
+              <input type="text" name="adr" id="adr" placeholder="Enter your adresse" required>
+              <br><br>
+              
+              <label for="netude"><b>Niveau d'étude:</b></label><br><br>
+              <label for="primaire"><b>Primaire</b></label>       <input type="radio" name="netude"  value="primaire" checked required>&nbsp;
+              <label for="moyen"><b>Moyen</b></label>             <input type="radio" name="netude" value="moyen">&nbsp;
+              <label for="lycée"><b>Lycée</b></label>             <input type="radio" name="netude" value="lycée">&nbsp;
+              <label for="université"><b>Université</b></label>   <input type="radio" name="netude" value="université">&nbsp;
+              <label for="autre"><b>Autre:</b></label>            <input type="radio" name="netude" value="autre" onclick="afficher()">
+              <input type="text" name="autre" id="autreN" style="display: none;" placeholder = "Autre ...">
+              <br><br>
+              
+              <label for="tlf"><b>Téléphone:</b></label><br>
+              <input type="tel" name="tlf" placeholder="Formt: 0*********" pattern="[0]{1}[0-9]{1}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
+              <br><br>
+              
+              <label for="type"><b>Type de formation:</b></label><br>
+              <select name="type" id="type" required>
+                  <optgroup label="Formations Qualifiantes">
+                      <optgroup label="Bureautique pack">
+                          <option value="Windows Initiation">Windows Initiation</option>
+                          <option value="MS Word initiation">MS Word initiation</option>
+                          <option value="MS Excel Initiation">MS Excel Initiation</option>
+                          <option value="MS Word perfectionnement">MS Word perfectionnement</option>
+                          <option value="MS Excel perfectionnement">MS Excel perfectionnement</option>
+                          <option value="MS Power Point">MS Power Point</option>
+                      </optgroup>
+              
+                      <optgroup label="Développement">
+                          <option value="PHP">PHP</option>
+                          <option value="MySQL">MySQL</option>
+                          <option value="CSS">CSS</option>
+                          <option value="HTML">HTML</option>
+                          <option value="JavaScript">JavaScript</option>
+                          <option value="Java">Java</option>
+                          <option value="C">C</option>
+                          <option value="Delphi">Delphi</option>
+                      </optgroup>
+              
+                      <optgroup label="Microsoft servers">
+                          <option value="Windows server">Windows server</option>
+                          <option value="SQL Server">SQL Server</option>
+                          <option value="Exchange Server">Exchange Server</option>
+                          <option value="ISA server / Forefront TMG">ISA server / Forefront TMG</option>
+                      </optgroup>
+              
+                      <optgroup label="Microsoft Office">
+                          <option value="MS Word initiation">MS Word initiation</option>
+                          <option value="MS Word perfectionnement">MS Word perfectionnement</option>
+                          <option value="MS Excel Niveau 1">MS Excel Niveau 1</option>
+                          <option value="MS Excel Niveau 2">MS Excel Niveau 2</option>
+                          <option value="MS Excel Niveau 3">MS Excel Niveau 3</option>
+                          <option value="VBA Excel">VBA Excel</option>
+                          <option value="MS Access initiation">MS Access initiation</option>
+                          <option value="MS Access perfectionnement">MS Access perfectionnement</option>
+                          <option value="MS Power Point">MS Power Point</option>
+                          <option value="MS Outlook">MS Outlook</option>
+                          <option value="MS Visio">MS Visio</option>
+                          <option value="MS Project">MS Project</option>
+                      </optgroup>
+              
+                      <optgroup label="Logiciels d'architecture DAO">
+                          <option value="Autocad 2D">Autocad 2D</option>
+                          <option value="Autocad 3D">Autocad 3D</option>
+                          <option value="Sketchup"></option>
+                      </optgroup>
+              
+                      <optgroup label="Infographie">
+                          <option value="Photoshop">Photoshop</option>
+                          <option value="In Design">In Design</option>
+                          <option value="Illustrator">Illustrator</option>
+                      </optgroup>
+              
+                      <optgroup label="Langues">
+                          <option value="Anglais américain">Anglais américain</option>
+                          <option value="Français">Français</option>
+                      </optgroup>
+              
+                      <optgroup label="Autre">
+                          <option value="Formation Réseaux">Formation Réseaux</option>
+                          <option value="Formation Maintenance PC">Formation Maintenance PC</option>
+                      </optgroup>
+                  </optgroup>
+              
+                  <optgroup label="Formation Diplomantes">
+                      <option value="TS en Informatique option SI">TS en Informatique option SI</option>
+                      <option value="Exploitant Informatique">Exploitant Informatique</option>
+                  </optgroup>
+              </select>
+              <br><br>
+              
+              <label for="email"><b>E-mail:</b></label><br>
+              <input type="text" name="email" placeholder="Enter tour email adresse" required>
+              <br><br>
+              
+              <label for="occup"><b>Occupation:</b></label><br>
+              <textarea name="occup" cols="40" rows="5" placeholder="Enter your occupation" required></textarea>
+              <br><br>
+              
+              <label for="dispo"><b>Disponibilité:</b></label><br>
+              <table class="tab" required >
+                  <tr>
+                      <th> </th>
+                      <th>Sam</th>
+                      <th>Dim</th>
+                      <th>Lun</th>
+                      <th>Mar</th>
+                      <th>Mer</th>
+                      <th>Jeu</th>
+                  </tr>
+                  <tr>
+                      <td>09h00-12h00</td>
+                      <td><input type="checkbox" name="dispo[]" value="samedi 9:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="dimanche 9:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="lundi 9:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="mardi 9:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="mercredi 9:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="jeudi 9:00"></td>
+                  </tr>
+                  <tr>
+                      <td>13h30-16h30</td>
+                      <td><input type="checkbox" name="dispo[]" value="samedi 13:30"></td>
+                      <td><input type="checkbox" name="dispo[]" value="dimanche 13:30"></td>
+                      <td><input type="checkbox" name="dispo[]" value="lundi 13:30"></td>
+                      <td><input type="checkbox" name="dispo[]" value="mardi 13:30"></td>
+                      <td><input type="checkbox" name="dispo[]" value="mercredi 13:30"></td>
+                      <td><input type="checkbox" name="dispo[]" value="jeudi 13:30"></td>
+                  </tr>
+                  <tr>
+                      <td>17h00-19h00</td>
+                      <td><input type="checkbox" name="dispo[]" value="samedi 17:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="dimanche 17:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="lundi 17:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="mardi 17:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="mercredi 17:00"></td>
+                      <td><input type="checkbox" name="dispo[]" value="jeudi 17:00"></td>
+                  </tr>
+              </table>
+              <br><br>
+              
+              <input type="submit" name="submit" value="Submit">
+              <input type="reset">
+              
+              </form>
+            
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
     </div>
   </div>
-  <!-- side nav ends -->
+ 
 
-  <!-- Start side nav
-    <div id="mySidenav" class="sidenav">
-      
-      <input type="text" id="mySearch" onkeyup="searchFunction()" placeholder="Recherche.." title="Type in a category">
-      
-      <ul id="myMenu">
+  
+  </div>
 
-        <li><a href="" class="title">Bureautique pack</a></li>
-        <li><a href="#">Windows Initiation</a></li>
-        <li><a href="#">MS Word initiation</a></li>
-        <li><a href="#">MS Excel Initiation</a></li>
-        <li><a href="#">MS Word perfectionnement</a></li>
-        <li><a href="#">MS Excel perfectionnement</a></li>
-        <li><a href="#">MS Power Point</a></li>
 
-        <li><a href="" class="title">Développement</a></li>
-        <li><a href="">PHP</a></li>
-        <li><a href="">MySQL</a></li>
-        <li><a href="">CSS</a></li>
-        <li><a href="">HTML</a></li>
-        <li><a href="">JavaScript</a></li>
-        <li><a href="">Java</a></li>
-        <li><a href="">C</a></li>
-        <li><a href="">Delphi</a></li>
+</div>
 
-        <li><a href="" class="title">Microsoft servers</a></li>
-        <li><a href="">Windows server</a></li>
-        <li><a href="">SQL Server</a></li>
-        <li><a href="">Exchange Server</a></li>
-        <li><a href="">ISA server / Forefront TMG</a></li>
-
-        <li><a href="" class="title">Microsoft Office</a></li>
-        <li><a href="#">MS Excel Niveau 1</a></li>
-        <li><a href="#">MS Excel Niveau 2</a></li>
-        <li><a href="#">MS Excel Niveau 3</a></li>
-        <li><a href="#">VBA Excel</a></li>
-        <li><a href="#">MS Access initiation</a></li>
-        <li><a href="#">MS Access perfectionnement</a></li>
-        <li><a href="#">MS Outlook</a></li>
-        <li><a href="#">MS Visio</a></li>
-        <li><a href="#">MS Project</a></li>
-
-        <li><a href="" class="title">Logiciels d'architecture DAO</a></li>
-        <li><a href="">Autocad 2D</a></li>
-        <li><a href="">Autocad 3D</a></li>
-        <li><a href="">Sketchup</a></li>
-
-        <li><a href="" class="title">Infographie</a></li>
-        <li><a href="#">Photoshop</a></li>
-        <li><a href="#">In Design</a></li>
-        <li><a href="#">Illustrator</a></li>
-
-        <li><a href="" class="title">Langues</a></li>
-        <li><a href="">Anglais américain</a></li>
-        <li><a href="">Français</a></li>
-
-        <li><a href="" class="title">Autre</a></li>
-        <li><a href="">Formation Réseaux</a></li>
-        <li><a href="">Formation Maintenance PC</a></li>
-
-        <li><a href="" class="title">Formation Diplomantes</a></li>
-        <li><a href="#">TS en Informatique option SI</a></li>
-        <li><a href="#">Exploitant Informatique</a></li>
-      </ul>
-    </div>
-    END side nav -->
+    
   <!-- End container -->
 
   <!-- Start Optional JavaScript -->
@@ -202,7 +393,55 @@
         }
       }
     }
+    
+    
+    function openNav() {
+      document.getElementById("mySidenav").style.display = "block";
+	    document.getElementById("mySidenav").style.width = "250px";
+	    document.getElementById("main").style.marginLeft = "250px";
+	  }
+
+	  function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	    document.getElementById("main").style.marginLeft = "0";
+	  }
+
+    function afficher(){
+        document.getElementById("autreN").style.display = 'block';
+    }
+	
   </script>
+
+<!-- <?php
+
+try
+{
+	$bdd = new PDO('mysql:host=localhost;dbname=gsef;charset=utf8', 'root', '');
+}
+catch(Exception $e)
+{
+        die('Erreur : '.$e->getMessage());
+}
+
+// Récupération des 10 derniers messages
+$reponse = $bdd->query('SELECT matricule, nom, prenom, gender, dateN, lieuN, adresse, niveauEtu, telephone, formation, email, occupation, disponibilité FROM preinscrit');
+
+// Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+while ($donnees = $reponse->fetch())
+{ 
+    echo '<p><strong>' . htmlspecialchars($donnees['matricule']) . '</strong></p>';
+    echo '<p>nom:' . htmlspecialchars($donnees['nom']) . ', prenom:' . htmlspecialchars($donnees['prenom']) . ', gender:' . htmlspecialchars($donnees['gender']) . '</p>';
+    echo '<p>date de naissance:' . htmlspecialchars($donnees['dateN']) . ' à ' . htmlspecialchars($donnees['lieuN']) . '</p>';
+    echo '<p>' . htmlspecialchars($donnees['adresse']) . '</p>';
+    echo '<p>' . htmlspecialchars($donnees['niveauEtu']) . '</p>';
+    echo '<p>' . htmlspecialchars($donnees['telephone']) . '</p>';
+    echo '<p>' . htmlspecialchars($donnees['formation']) . '</p>';
+    echo '<p>' . htmlspecialchars($donnees['email']) . '</p>';
+    echo '<p>' . htmlspecialchars($donnees['occupation']) . '</p>';
+}
+$reponse->closeCursor();
+?> -->
+
   <!-- End Optional JavaScript -->
 
   <br><br><br><br>
