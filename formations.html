@@ -63,11 +63,6 @@
             <a href="contact.html" class="nav-link">Contact</a>
           </li>
 
-          <!-- RECHERCHE -->
-          <li class="nav-item">
-            <i class="fa fa-search btn ml-2 mt-1 btn-lg"><a href="https://www.geni-soft.com"></a></i>
-          </li>
-
           <li class="nav-item">
             <a href="php/welcome.php" class="btn btn-link" style="color: rgba(255,255,255,.6);">Login</a>
           </li>
@@ -98,10 +93,21 @@
   </div>
 
   <div class="container">
+
+    <!-- Image Header -->
+    <img class="img-fluid rounded mb-1" src="img\homme2.jpg" alt="">
+    
+      <!-- search box -->
+      <form action="" class="form-inline form-control-dark justify-content-end my-0">
+        <p class="mt-3">Vous pouver chercher la formation de votre choix ou consulter toutes les formations que nous proposons:
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input class="form-control mr-2" type="text" placeholder="Recherche">
+        <button class="btn btn-outline-white my-2 pull-right btn-secondary">Rechercher</button>
+      </form>
+
+
     <div class="accordian" id="accordianExample">
-      <!-- Image Header -->
-        <img class="img-fluid rounded mb-3" src="img\homme2.jpg" alt="">
-      <p>Nous proposons plusieurs formations certifiantes et diplomantes de différents domaines que nous présentons en desous, clicker sur la formation de votre choix pour s'inscrire ou avoir plus de détails:</p>
+
       <!-- First header -->
       <div class="card">
         <div class="card-header bg-secondary" id="headingOne">
@@ -115,12 +121,18 @@
         <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="BureautiquePack">
-              <li class="list-group-item"><a href="formations\BureautiquePack\windowsInitiatition.html" class="text-secondary" target="blank">Windows Initiation</a></li>
-              <li class="list-group-item"><a href="formations\BureautiquePack\MSWordInitiation.html" class="text-secondary" target="blank">MS Word Initiation</a></li>
-              <li class="list-group-item"><a href="formations\BureautiquePack\MSExcelInitiation.html"  class="text-secondary" target="blank">MS Excel Initiation</a></li>
-              <li class="list-group-item"><a href="formations\BureautiquePack\MSWordPerfectionnement.html" class="text-secondary" target="blank">MS Word Perfectionnement</a></li>
-              <li class="list-group-item"><a href="formations\BureautiquePack\MSExcelPerfectionnement.html" class="text-secondary" target="blank">MS Excel Perfectionnement</a></li>
-              <li class="list-group-item"><a href="formations\BureautiquePack\MSPowerPoint.html" class="text-secondary" target="blank">MS Power Point</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\windowsInitiatition.html"
+                  class="text-secondary" target="blank">Windows Initiation</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSWordInitiation.html"
+                  class="text-secondary" target="blank">MS Word Initiation</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSExcelInitiation.html"
+                  class="text-secondary" target="blank">MS Excel Initiation</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSWordPerfectionnement.html"
+                  class="text-secondary" target="blank">MS Word Perfectionnement</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSExcelPerfectionnement.html"
+                  class="text-secondary" target="blank">MS Excel Perfectionnement</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSPowerPoint.html" class="text-secondary"
+                  target="blank">MS Power Point</a></li>
             </ul>
           </div>
         </div>
@@ -129,8 +141,8 @@
       <div class="card">
         <div class="card-header bg-dark" id="headingTwo">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseTwo"
-              aria-expanded="false" aria-controls="collapseTwo">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Développement &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -138,14 +150,22 @@
         <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordianExample">
           <div class="card-body">
             <ul id="Developpement" class="list-group list-group-flush">
-              <li class="list-group-item"><a href="formations\Developpement\PHP.html" class="text-secondary" target="blank">PHP</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\MySQL.html" class="text-secondary" target="blank">MySQL</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\CSS.html" class="text-secondary" target="blank">CSS</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\HTML.html" class="text-secondary" target="blank">HTML</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\JavaScript.html" class="text-secondary" target="blank">JavaScript</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\Java.html" class="text-secondary" target="blank">Java</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\C.html" class="text-secondary" target="blank">C</a></li>
-              <li class="list-group-item"><a href="formations\Developpement\Delphi.html" class="text-secondary" target="blank">Delphi</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\PHP.html" class="text-secondary"
+                  target="blank">PHP</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\MySQL.html" class="text-secondary"
+                  target="blank">MySQL</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\CSS.html" class="text-secondary"
+                  target="blank">CSS</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\HTML.html" class="text-secondary"
+                  target="blank">HTML</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\JavaScript.html" class="text-secondary"
+                  target="blank">JavaScript</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\Java.html" class="text-secondary"
+                  target="blank">Java</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\C.html" class="text-secondary"
+                  target="blank">C</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\Delphi.html" class="text-secondary"
+                  target="blank">Delphi</a></li>
             </ul>
           </div>
         </div>
@@ -154,8 +174,8 @@
       <div class="card">
         <div class="card-header bg-secondary" id="headingThree">
           <h6 class="by-0 py-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseThree"
-              aria-expanded="false" aria-controls="collapseThree">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Microsoft servers &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -163,10 +183,14 @@
         <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="MicrosoftServers">
-              <li class="list-group-item"><a href="formations\MicrosoftServers\WindowsServer.html" class="text-secondary" target="blank">Windows Server</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftServers\SQLServer.html" class="text-secondary" target="blank">SQL Server</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftServers\ExchangeServer.html" class="text-secondary" target="blank">Exchange Server</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftServers\ISAServer.html" class="text-secondary" target="blank">ISA Server / Forefront TMG</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\WindowsServer.html"
+                  class="text-secondary" target="blank">Windows Server</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\SQLServer.html" class="text-secondary"
+                  target="blank">SQL Server</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\ExchangeServer.html"
+                  class="text-secondary" target="blank">Exchange Server</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\ISAServer.html" class="text-secondary"
+                  target="blank">ISA Server / Forefront TMG</a></li>
             </ul>
           </div>
         </div>
@@ -175,8 +199,8 @@
       <div class="card">
         <div class="card-header bg-dark" id="headingFour">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseFour"
-              aria-expanded="false" aria-controls="collapseFour">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
               Microsoft Office &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -184,15 +208,24 @@
         <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="MicrosoftOffice">
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau1.html" class="text-secondary" target="blank">MS Excel Niveau 1</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau2.html" class="text-secondary" target="blank">MS Excel Niveau 2</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau3.html" class="text-secondary" target="blank">MS Excel Niveau 3</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\VBAExcel.html" class="text-secondary" target="blank">VBA Excel</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSAccessInitiation.html" class="text-secondary" target="blank">MS Access Initiation</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSAccessPerfectionnement.html" class="text-secondary" target="blank">MS Access Perfectionnement</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSOutlook.html" class="text-secondary" target="blank">MS Outlook</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSVisio.html" class="text-secondary" target="blank">MS Visio</a></li>
-              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSProject.html" class="text-secondary" target="blank">MS Project</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau1.html"
+                  class="text-secondary" target="blank">MS Excel Niveau 1</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau2.html"
+                  class="text-secondary" target="blank">MS Excel Niveau 2</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau3.html"
+                  class="text-secondary" target="blank">MS Excel Niveau 3</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\VBAExcel.html" class="text-secondary"
+                  target="blank">VBA Excel</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSAccessInitiation.html"
+                  class="text-secondary" target="blank">MS Access Initiation</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSAccessPerfectionnement.html"
+                  class="text-secondary" target="blank">MS Access Perfectionnement</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSOutlook.html" class="text-secondary"
+                  target="blank">MS Outlook</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSVisio.html" class="text-secondary"
+                  target="blank">MS Visio</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSProject.html" class="text-secondary"
+                  target="blank">MS Project</a></li>
             </ul>
           </div>
         </div>
@@ -201,8 +234,8 @@
       <div class="card">
         <div class="card-header bg-secondary" id="headingFive">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseFive"
-              aria-expanded="false" aria-controls="collapseFive">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
               Logiciels d'architecture DAO &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -210,9 +243,12 @@
         <div class="collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="LogicielsAarchitectureDAO">
-              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Autocad2D.html" class="text-secondary" target="blank">Autocad 2D</a></li>
-              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Autocad3D.html" class="text-secondary" target="blank">Autocad 3D</a></li>
-              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Sketchup.html" class="text-secondary" target="blank">Sketchup</a></li>
+              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Autocad2D.html"
+                  class="text-secondary" target="blank">Autocad 2D</a></li>
+              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Autocad3D.html"
+                  class="text-secondary" target="blank">Autocad 3D</a></li>
+              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Sketchup.html"
+                  class="text-secondary" target="blank">Sketchup</a></li>
             </ul>
           </div>
         </div>
@@ -221,8 +257,8 @@
       <div class="card">
         <div class="card-header bg-dark" id="headingSix">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseSix"
-              aria-expanded="false" aria-controls="collapseSix">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
               Infographie &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -230,9 +266,12 @@
         <div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="Infographie">
-              <li class="list-group-item"><a href="formations\Infographie\Photoshop.html" class="text-secondary" target="blank">Photoshop</a></li>
-              <li class="list-group-item"><a href="formations\Infographie\InDesign.html" class="text-secondary" target="blank">In Design</a></li>
-              <li class="list-group-item"><a href="formations\Infographie\Illustrator.html" class="text-secondary" target="blank">Illustrator</a></li>
+              <li class="list-group-item"><a href="formations\Infographie\Photoshop.html" class="text-secondary"
+                  target="blank">Photoshop</a></li>
+              <li class="list-group-item"><a href="formations\Infographie\InDesign.html" class="text-secondary"
+                  target="blank">In Design</a></li>
+              <li class="list-group-item"><a href="formations\Infographie\Illustrator.html" class="text-secondary"
+                  target="blank">Illustrator</a></li>
             </ul>
           </div>
         </div>
@@ -241,8 +280,8 @@
       <div class="card">
         <div class="card-header bg-secondary" id="headingSeven">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseSeven"
-              aria-expanded="false" aria-controls="collapseSeven">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
               Langues &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -250,8 +289,10 @@
         <div class="collapse" id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="Langues">
-              <li class="list-group-item"><a href="formations\Langues\AnglaisAmericain.html" class="text-secondary" target="blank">Anglais Américain</a></li>
-              <li class="list-group-item"><a href="formations\Langues\Français.html" class="text-secondary" target="blank">Français</a></li>
+              <li class="list-group-item"><a href="formations\Langues\AnglaisAmericain.html" class="text-secondary"
+                  target="blank">Anglais Américain</a></li>
+              <li class="list-group-item"><a href="formations\Langues\Français.html" class="text-secondary"
+                  target="blank">Français</a></li>
             </ul>
           </div>
         </div>
@@ -260,8 +301,8 @@
       <div class="card">
         <div class="card-header bg-dark" id="headingEight">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseEight"
-              aria-expanded="false" aria-controls="collapseEight">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
               Autre &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -269,8 +310,10 @@
         <div class="collapse" id="collapseEight" aria-labelledby="headingEight" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="Autre">
-              <li class="list-group-item"><a href="formations\Autre\FormationReseaux" class="text-secondary" target="blank">Formation Réseaux</a></li>
-              <li class="list-group-item"><a href="formations\Autre\FormationMaintenancePC" class="text-secondary" target="blank">Formation Maintenance PC</a></li>
+              <li class="list-group-item"><a href="formations\Autre\FormationReseaux" class="text-secondary"
+                  target="blank">Formation Réseaux</a></li>
+              <li class="list-group-item"><a href="formations\Autre\FormationMaintenancePC" class="text-secondary"
+                  target="blank">Formation Maintenance PC</a></li>
 
             </ul>
           </div>
@@ -280,8 +323,8 @@
       <div class="card">
         <div class="card-header bg-secondary" id="headingNine">
           <h6 class="bt-0">
-            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse" data-target="#collapseNine"
-              aria-expanded="false" aria-controls="collapseNine">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
               Formations Diplomantes &nbsp;&nbsp;&nbsp;>>
             </button>
           </h6>
@@ -289,8 +332,10 @@
         <div class="collapse" id="collapseNine" aria-labelledby="headingNine" data-parent="#accordianExample">
           <div class="card-body">
             <ul class="list-group list-group-flush" id="FormationsDiplomantes">
-              <li class="list-group-item"><a href="formations\FormationsDiplomantes\TSenInformatiqueOptionSI.html" class="text-secondary" target="blank">TS en Informatique Option SI</a></li>
-              <li class="list-group-item"><a href="formations\FormationsDiplomantes\ExploitantInformatique.html" class="text-secondary" target="blank">Exploitant Informatique</a></li>
+              <li class="list-group-item"><a href="formations\FormationsDiplomantes\TSenInformatiqueOptionSI.html"
+                  class="text-secondary" target="blank">TS en Informatique Option SI</a></li>
+              <li class="list-group-item"><a href="formations\FormationsDiplomantes\ExploitantInformatique.html"
+                  class="text-secondary" target="blank">Exploitant Informatique</a></li>
             </ul>
           </div>
         </div>

@@ -107,6 +107,10 @@ a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
 .my-text-color{
     text-color: #143b64;
 }
+.my-btn-color{
+    btn-outline: #143b64;
+}
+
 
 /*
 *************************************************************************************************************************
