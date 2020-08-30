@@ -131,6 +131,38 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     crossorigin="anonymous"></script>
 
   <script src="js/navbar-shrinker.js"></script>
+
+  
+  <?php
+        try
+        {
+            $bdd = new PDO('mysql:host=localhost;dbname=gsef;charset=utf8', 'root', '');
+        }
+        catch(Exception $e)
+        {
+                die('Erreur : '.$e->getMessage());
+        }
+
+
+        // Récupération des 10 derniers messages
+        $reponse = $bdd->query('SELECT matricule, nom, prenom, gender, dateN, lieuN, adresse, niveauEtu, telephone, formation, email, occupation, disponibilité FROM preinscrit');
+       
+        // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+        while ($donnees = $reponse->fetch())
+        { 
+            echo '<p><strong>' . htmlspecialchars($donnees['matricule']) . '</strong></p>';
+            echo '<p>nom:' . htmlspecialchars($donnees['nom']) . ', prenom:' . htmlspecialchars($donnees['prenom']) . ', gender:' . htmlspecialchars($donnees['gender']) . '</p>';
+            echo '<p>date de naissance:' . htmlspecialchars($donnees['dateN']) . ' à ' . htmlspecialchars($donnees['lieuN']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['adresse']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['niveauEtu']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['telephone']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['formation']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['email']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['occupation']) . '</p>';
+            echo '<p>' . htmlspecialchars($donnees['disponibilité']) . '</p>';
+        }
+        $reponse->closeCursor();
+    ?>
 </body>
 
 </html>

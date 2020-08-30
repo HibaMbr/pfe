@@ -147,7 +147,7 @@
                     style=" background-color: #143B46; border: none;">Inscription</button>
                 <!-- Modal -->
                 <div class="modal fade" id="inscrModal" role="dialog">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-dialog-scrollable">
 
                         <!-- Modal content-->
                         <div class="modal-content">
@@ -218,32 +218,32 @@
                                         <div class="form-group">
                                             <label for="nivoEtude" class="col-sm-5 control-label"><b>Niveau
                                                     d'étude:</b></label><br>
-                                            <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
-                                                <label for="primaire" class="btn btn-dark">
-                                                    <input type="radio" name="nivoEtude" id="primaire" value="primaire"
-                                                        onclick="fermer()" checked required> primaire
-                                                </label>
-                                                <label for="moyen" class="btn btn-dark">
-                                                    <input type="radio" name="nivoEtude" id="moyen" value="moyen"
-                                                        onclick="fermer()"> moyen
-                                                </label>
-                                                <label for="lycée" class="btn btn-dark">
-                                                    <input type="radio" name="nivoEtude" id="lycée" value="lycée"
-                                                        onclick="fermer()"> lycée
-                                                </label>
-                                                <label for="université" class="btn btn-dark">
-                                                    <input type="radio" name="nivoEtude" id="université"
-                                                        value="université" onclick="fermer()"> université
-                                                </label>
-                                                <label for="autre" class="btn btn-dark">
-                                                    <input type="radio" name="nivoEtude" id="autre" value="autre"
-                                                        onclick="afficher()"> autre
-                                                </label>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <input class="form-control" type="text" name="nivoEtude" id="autreN"
-                                                    style="display: none;" placeholder="Autre ...">
-                                            </div>
+                                                <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
+                                                    <label for="primaire" class="btn btn-dark">
+                                                        <input type="radio" name="nivoEtude" id="primaire" value="primaire"
+                                                            onclick="fermer()" checked required> primaire
+                                                    </label>
+                                                    <label for="moyen" class="btn btn-dark">
+                                                        <input type="radio" name="nivoEtude" id="moyen" value="moyen"
+                                                            onclick="fermer()"> moyen
+                                                    </label>
+                                                    <label for="lycée" class="btn btn-dark">
+                                                        <input type="radio" name="nivoEtude" id="lycée" value="lycée"
+                                                            onclick="fermer()"> lycée
+                                                    </label>
+                                                    <label for="université" class="btn btn-dark">
+                                                        <input type="radio" name="nivoEtude" id="université" value="université"
+                                                            onclick="fermer()"> université
+                                                    </label>
+                                                </div>
+                                                <div class="btn-group btn-group-toggle col-sm-12">
+                                                    <label for="autre" class="btn btn-dark">
+                                                        <input type="radio" name="nivoEtude" id="autre" value="autre"
+                                                            onclick="afficher()"> autre
+                                                    </label>
+                                                    <input class="form-control" type="text" name="autre" id="autreN"
+                                                        style="display: none;" placeholder="Autre ...">
+                                                </div>
                                         </div>
 
                                         <div class="form-group">
@@ -449,7 +449,7 @@
         <div>
             <p style="color: #143B46; font-size: 30px; font-style: oblique;"><b>Voir aussi :</b></p>
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-4 mb-4">
                     <a href="MSWordInitiation.html" class="aussi">
                         <div class="card h-80 shadow">
                             <h4 class="card-header my-bg-color text-white">MS Word Initiation</h4>
@@ -460,7 +460,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 mb-4">
                     <a href="MSExcelInitiation.html" class="aussi">
                         <div class="card h-80 shadow">
                             <h4 class="card-header my-bg-color text-white">MS Excel Initiation</h4>
@@ -471,7 +471,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-4 mb-4">
                     <a href="MSPowerPoint.html" class="aussi">
                         <div class="card h-80 shadow">
                             <h4 class="card-header my-bg-color text-white">MS PowerPoint</h4>
@@ -504,7 +504,7 @@
 
     <script>
 
-        function searchFunction() {
+        /*function searchFunction() {
             var input, filter, ul, li, a, i;
             input = document.getElementById("mySearch");
             filter = input.value.toUpperCase();
@@ -519,7 +519,18 @@
                     li[i].style.display = "none";
                 }
             }
+        }*/
+
+        //afficher autre niveau d'etude
+        function afficher(){
+        document.getElementById("autreN").style.display = 'block';
         }
+
+        //fermer autre niveau d'etude
+        function fermer(){
+        document.getElementById("autreN").style.display = 'none';
+        }
+
     </script>
     <!-- End Optional JavaScript -->
 
