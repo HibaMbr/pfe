@@ -217,23 +217,32 @@
                                         <div class="form-group">
                                             <label for="nivoEtude" class="col-sm-5 control-label"><b>Niveau
                                                     d'étude:</b></label><br>
-                                            <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
-                                                <label for="primaire" class="btn btn-secondary">
-                                                    <input type="radio" name="nivoEtude" id="primaire" value="primaire"
-                                                        onclick="fermer()" checked required> primaire
-                                                </label>
-                                                <label for="moyen" class="btn btn-secondary">
-                                                    <input type="radio" name="nivoEtude" id="moyen" value="moyen"
-                                                        onclick="fermer()"> moyen
-                                                </label>
-                                                <label for="lycée" class="btn btn-secondary">
-                                                    <input type="radio" name="nivoEtude" id="lycée" value="lycée"
-                                                        onclick="fermer()"> lycée
-                                                </label>
-                                                <label for="université" class="btn btn-secondary">
-                                                    <input type="radio" name="nivoEtude" id="université"
-                                                        value="université" onclick="fermer()" required> université
-                                                </label>
+                                                <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
+                                                    <label for="primaire" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="primaire" value="primaire"
+                                                            onclick="fermer()" checked required> primaire
+                                                    </label>
+                                                    <label for="moyen" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="moyen" value="moyen"
+                                                            onclick="fermer()"> moyen
+                                                    </label>
+                                                    <label for="lycée" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="lycée" value="lycée"
+                                                            onclick="fermer()"> lycée
+                                                    </label>
+                                                    <label for="université" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="université"
+                                                            value="université" onclick="fermer()"> université
+                                                    </label>
+                                                </div>
+                                                <div class="btn-group btn-group-toggle col-sm-12">
+                                                    <label for="autre" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="autre" value="autre"
+                                                            onclick="afficher()"> autre
+                                                    </label>
+                                                    <input class="form-control" type="text" name="autre" id="autreN"
+                                                        style="display: none;" placeholder="Autre ...">
+                                                </div>
                                         </div>
 
                                         <div class="form-group">
