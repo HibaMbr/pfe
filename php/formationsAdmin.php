@@ -1,0 +1,489 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+?>
+
+
+<!doctype html>
+<html lang="Fr">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Costum CSS -->
+  <link rel="stylesheet" type="text/css" href="../css/custom.css">
+  <!-- <link rel="stylesheet" href="css/sideNav.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <title>Formations | Geni Soft Ecole</title>
+
+</head>
+
+<body>
+
+  <!-- Start Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark my-bg-color fixed-top">
+
+    <!-- Start Container -->
+    <div class="container">
+
+      <!-- Nav Brand -->
+      <a id="logo" href="indexAdmin.php" class="navbar-brand text-white">Geni Soft Ecole</a>
+
+      <!-- Start Button -->
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation"><i class="fa fa-bars"></i>
+        <span class="navbar-toggle-icon" aria-label="menu"></span>
+      </button>
+      <!-- End Button -->
+
+      <!-- Start Links -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+
+          <!-- ACCUEIL -->
+          <li class="nav-item">
+            <a href="indexAdmin.php" class="nav-link">Accueil</a>
+          </li>
+
+          <!-- NOS FORMATIONS -->
+          <li class="nav-item">
+            <a href="formationsAdmin.php" class="nav-link">Nos Formations</a>
+          </li>
+
+          <!-- NOS OFFRES -->
+          <li class="nav-item">
+            <a href="" class="nav-link">Nos Offres</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a href="" class="nav-link">Contact</a>
+          </li>
+
+          <li class="nav-item">
+             <a href="logout.php" class="btn btn-link" style="color: rgba(255,255,255,.6);">Logout</a>
+          </li>
+
+        </ul>
+
+      </div>
+      <!-- End Links -->
+
+    </div>
+    <!-- End Container -->
+
+  </nav>
+  <!-- End Navigation -->
+
+  <!-- Start container -->
+  <div class="container">
+
+    <!-- Page Title -->
+    <h1 class="mt-4 mb-3">Nos formations</h1>
+
+    <!-- Start Breadcrumb -->
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="indexAdmin.php">Accueil</a></li>
+      <li class="breadcrumb-item active">Formations</li>
+    </ul>
+    <!-- End Breadcrumb -->
+  </div>
+
+  <div class="container">
+
+    <!-- Image Header -->
+    <!-- <img class="img-fluid rounded mb-1" src="img\homme2.jpg" alt=""> -->
+    <!-- <br><br> -->
+    
+      <!-- search box -->
+      <form action="" class="form-inline form-control-dark justify-content-end my-0">
+        <p class="mt-3">Vous pouver chercher la formation de votre choix ou consulter toutes les formations que nous proposons:
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <input class="form-control mr-2" type="text" placeholder="Recherche">
+        <button class="btn btn-outline-white my-2 pull-right btn-secondary">Rechercher</button>
+      </form>
+
+      <br>
+
+
+    <div class="accordian" id="accordianExample">
+
+      <!-- First header -->
+      <div class="card">
+        <div class="card-header bg-secondary" id="headingOne">
+          <h6 class="bt-0">
+            <button class="btn btn-link text-white" type="button" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              Bureautique pack &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="BureautiquePack">
+              <li class="list-group-item"><a href="../formationsAdmin/BureautiquePack/WindowsInitiatition.php"
+                  class="text-secondary" target="blank">Windows Initiation</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSWordInitiation.html"
+                  class="text-secondary" target="blank">MS Word Initiation</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSExcelInitiation.html"
+                  class="text-secondary" target="blank">MS Excel Initiation</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSWordPerfectionnement.html"
+                  class="text-secondary" target="blank">MS Word Perfectionnement</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSExcelPerfectionnement.html"
+                  class="text-secondary" target="blank">MS Excel Perfectionnement</a></li>
+              <li class="list-group-item"><a href="formations\BureautiquePack\MSPowerPoint.html" class="text-secondary"
+                  target="blank">MS Power Point</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Second header -->
+      <div class="card">
+        <div class="card-header bg-dark" id="headingTwo">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Développement &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul id="Developpement" class="list-group list-group-flush">
+              <li class="list-group-item"><a href="formations\Developpement\PHP.html" class="text-secondary"
+                  target="blank">PHP</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\MySQL.html" class="text-secondary"
+                  target="blank">MySQL</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\CSS.html" class="text-secondary"
+                  target="blank">CSS</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\HTML.html" class="text-secondary"
+                  target="blank">HTML</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\JavaScript.html" class="text-secondary"
+                  target="blank">JavaScript</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\Java.html" class="text-secondary"
+                  target="blank">Java</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\C.html" class="text-secondary"
+                  target="blank">C</a></li>
+              <li class="list-group-item"><a href="formations\Developpement\Delphi.html" class="text-secondary"
+                  target="blank">Delphi</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Third header -->
+      <div class="card">
+        <div class="card-header bg-secondary" id="headingThree">
+          <h6 class="by-0 py-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Microsoft servers &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="MicrosoftServers">
+              <li class="list-group-item"><a href="formations\MicrosoftServers\WindowsServer.html"
+                  class="text-secondary" target="blank">Windows Server</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\SQLServer.html" class="text-secondary"
+                  target="blank">SQL Server</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\ExchangeServer.html"
+                  class="text-secondary" target="blank">Exchange Server</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftServers\ISAServer.html" class="text-secondary"
+                  target="blank">ISA Server / Forefront TMG</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Fourth header -->
+      <div class="card">
+        <div class="card-header bg-dark" id="headingFour">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Microsoft Office &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="MicrosoftOffice">
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau1.html"
+                  class="text-secondary" target="blank">MS Excel Niveau 1</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau2.html"
+                  class="text-secondary" target="blank">MS Excel Niveau 2</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSExcelNiveau3.html"
+                  class="text-secondary" target="blank">MS Excel Niveau 3</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\VBAExcel.html" class="text-secondary"
+                  target="blank">VBA Excel</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSAccessInitiation.html"
+                  class="text-secondary" target="blank">MS Access Initiation</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSAccessPerfectionnement.html"
+                  class="text-secondary" target="blank">MS Access Perfectionnement</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSOutlook.html" class="text-secondary"
+                  target="blank">MS Outlook</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSVisio.html" class="text-secondary"
+                  target="blank">MS Visio</a></li>
+              <li class="list-group-item"><a href="formations\MicrosoftOffice\MSProject.html" class="text-secondary"
+                  target="blank">MS Project</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Fifth header -->
+      <div class="card">
+        <div class="card-header bg-secondary" id="headingFive">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Logiciels d'architecture DAO &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="LogicielsAarchitectureDAO">
+              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Autocad2D.html"
+                  class="text-secondary" target="blank">Autocad 2D</a></li>
+              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Autocad3D.html"
+                  class="text-secondary" target="blank">Autocad 3D</a></li>
+              <li class="list-group-item"><a href="formations\LogicielsArchitectureDAO\Sketchup.html"
+                  class="text-secondary" target="blank">Sketchup</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Sixth header -->
+      <div class="card">
+        <div class="card-header bg-dark" id="headingSix">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              Infographie &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="Infographie">
+              <li class="list-group-item"><a href="formations\Infographie\Photoshop.html" class="text-secondary"
+                  target="blank">Photoshop</a></li>
+              <li class="list-group-item"><a href="formations\Infographie\InDesign.html" class="text-secondary"
+                  target="blank">In Design</a></li>
+              <li class="list-group-item"><a href="formations\Infographie\Illustrator.html" class="text-secondary"
+                  target="blank">Illustrator</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Seventh header -->
+      <div class="card">
+        <div class="card-header bg-secondary" id="headingSeven">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              Langues &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseSeven" aria-labelledby="headingSeven" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="Langues">
+              <li class="list-group-item"><a href="formations\Langues\AnglaisAmericain.html" class="text-secondary"
+                  target="blank">Anglais Américain</a></li>
+              <li class="list-group-item"><a href="formations\Langues\Français.html" class="text-secondary"
+                  target="blank">Français</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Eight header -->
+      <div class="card">
+        <div class="card-header bg-dark" id="headingEight">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              Autre &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseEight" aria-labelledby="headingEight" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="Autre">
+              <li class="list-group-item"><a href="formations\Autre\FormationReseaux" class="text-secondary"
+                  target="blank">Formation Réseaux</a></li>
+              <li class="list-group-item"><a href="formations\Autre\FormationMaintenancePC" class="text-secondary"
+                  target="blank">Formation Maintenance PC</a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Nineth header -->
+      <div class="card">
+        <div class="card-header bg-secondary" id="headingNine">
+          <h6 class="bt-0">
+            <button class="btn btn-link collapsed text-white" type="button" data-toggle="collapse"
+              data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+              Formations Diplomantes &nbsp;&nbsp;&nbsp;>>
+            </button>
+          </h6>
+        </div>
+        <div class="collapse" id="collapseNine" aria-labelledby="headingNine" data-parent="#accordianExample">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="FormationsDiplomantes">
+              <li class="list-group-item"><a href="formations\FormationsDiplomantes\TSenInformatiqueOptionSI.html"
+                  class="text-secondary" target="blank">TS en Informatique Option SI</a></li>
+              <li class="list-group-item"><a href="formations\FormationsDiplomantes\ExploitantInformatique.html"
+                  class="text-secondary" target="blank">Exploitant Informatique</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Start side nav
+    <div id="mySidenav" class="sidenav">
+      
+      <input type="text" id="mySearch" onkeyup="searchFunction()" placeholder="Recherche.." title="Type in a category">
+      
+      <ul id="myMenu">
+
+        <li><a href="" class="title">Bureautique pack</a></li>
+        <li><a href="#">Windows Initiation</a></li>
+        <li><a href="#">MS Word initiation</a></li>
+        <li><a href="#">MS Excel Initiation</a></li>
+        <li><a href="#">MS Word perfectionnement</a></li>
+        <li><a href="#">MS Excel perfectionnement</a></li>
+        <li><a href="#">MS Power Point</a></li>
+
+        <li><a href="" class="title">Développement</a></li>
+        <li><a href="">PHP</a></li>
+        <li><a href="">MySQL</a></li>
+        <li><a href="">CSS</a></li>
+        <li><a href="">HTML</a></li>
+        <li><a href="">JavaScript</a></li>
+        <li><a href="">Java</a></li>
+        <li><a href="">C</a></li>
+        <li><a href="">Delphi</a></li>
+
+        <li><a href="" class="title">Microsoft servers</a></li>
+        <li><a href="">Windows server</a></li>
+        <li><a href="">SQL Server</a></li>
+        <li><a href="">Exchange Server</a></li>
+        <li><a href="">ISA server / Forefront TMG</a></li>
+
+        <li><a href="" class="title">Microsoft Office</a></li>
+        <li><a href="#">MS Excel Niveau 1</a></li>
+        <li><a href="#">MS Excel Niveau 2</a></li>
+        <li><a href="#">MS Excel Niveau 3</a></li>
+        <li><a href="#">VBA Excel</a></li>
+        <li><a href="#">MS Access initiation</a></li>
+        <li><a href="#">MS Access perfectionnement</a></li>
+        <li><a href="#">MS Outlook</a></li>
+        <li><a href="#">MS Visio</a></li>
+        <li><a href="#">MS Project</a></li>
+
+        <li><a href="" class="title">Logiciels d'architecture DAO</a></li>
+        <li><a href="">Autocad 2D</a></li>
+        <li><a href="">Autocad 3D</a></li>
+        <li><a href="">Sketchup</a></li>
+
+        <li><a href="" class="title">Infographie</a></li>
+        <li><a href="#">Photoshop</a></li>
+        <li><a href="#">In Design</a></li>
+        <li><a href="#">Illustrator</a></li>
+
+        <li><a href="" class="title">Langues</a></li>
+        <li><a href="">Anglais américain</a></li>
+        <li><a href="">Français</a></li>
+
+        <li><a href="" class="title">Autre</a></li>
+        <li><a href="">Formation Réseaux</a></li>
+        <li><a href="">Formation Maintenance PC</a></li>
+
+        <li><a href="" class="title">Formation Diplomantes</a></li>
+        <li><a href="#">TS en Informatique option SI</a></li>
+        <li><a href="#">Exploitant Informatique</a></li>
+      </ul>
+    </div>
+    END side nav -->
+  <!-- End container -->
+
+  <!-- Start Optional JavaScript -->
+  <script>
+
+    function searchFunction() {
+      var input, filter, ul, li, a, i;
+      input = document.getElementById("mySearch");
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myMenu");
+      li = ul.getElementsByTagName("li");
+
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+  <!-- End Optional JavaScript -->
+
+  <br><br><br><br>
+
+  <!-- Footer -->
+  <footer class="py-5 my-bg-color text-center">
+    <div class="container">
+
+      <div class="btn-group btn-group-lg">
+        <a class="btn btn-secondary" href="https://www.geni-soft.com" target="blank"><i class="fa fa-globe"></i></a>
+        <a class="btn btn-dark" href="https://web.facebook.com/GeniSoftInformatique/?ref=br_rs" target="blank"><i
+            class="fa fa-facebook"></i></a>
+        <a class="btn btn-secondary" href="https://www.linkedin.com/company/geni-soft-informatique" target="blank"><i
+            class="fa fa-linkedin"></i></a>
+        <a class="btn btn-dark" href="contact.html"><i class="fa fa-phone"></i></a>
+        <a class="btn btn-secondary" href="contact.html"><i class="fa fa-envelope-o"></i></a>
+      </div>
+
+      <br><br><br>
+      <p class="m-0 text-center text-white">Geni Soft Ecole - Copyright &copy; 2020 Tous droits réservés</p>
+
+    </div>
+
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

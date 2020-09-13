@@ -22,10 +22,12 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <!-- Costum CSS -->
-  <link rel="stylesheet" type="text/css" href="../css\custom.css">
+  <link rel="stylesheet" type="text/css" href="../css/custom.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <title>Accueil | Geni Soft Ecole</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -38,7 +40,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     <div class="container">
 
       <!-- Nav Brand -->
-      <a id="logo" href="index.html" class="navbar-brand js-scroll-trigger text-white">Geni Soft Ecole</a>
+      <a id="logo" href="indexAdmin.php" class="navbar-brand js-scroll-trigger text-white">Geni Soft Ecole</a>
       <!-- the class navbar-brand gives the logo of our web page -->
       <!-- <a id="logo-no-bg" href="index.html"><img src="img\GS-logo-removebg-preview"></a> -->
 
@@ -56,7 +58,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
           <!-- ACCUEIL -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link js-scroll-trigger">Accueil</a>
+            <a href="indexAdmin.php" class="nav-link js-scroll-trigger">Accueil</a>
           </li>
 
           <!-- NOS FORMATIONS -->
@@ -64,23 +66,23 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
             <!-- dropdown-toggle -->
             <!-- id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" -->
              
-            <a href="formations.html" class="nav-link  js-scroll-trigger">Nos Formations</a>
+            <a href="formationsAdmin.php" class="nav-link  js-scroll-trigger">Nos Formations</a>
           </li>
 
           <!-- NOS OFFRES -->
           <li class="nav-item">
-            <a href="offres.html" class="nav-link js-scroll-trigger">Nos Offres</a>
+            <a href="" class="nav-link js-scroll-trigger">Nos Offres</a>
           </li>
 
           <!-- CONTACT -->
           <li class="nav-item">
-            <a href="contact.html" class="nav-link js-scroll-trigger">Contact</a>
+            <a href="" class="nav-link js-scroll-trigger">Contact</a>
           </li>
 
           <!-- RECHERCHE -->
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <i class="fa fa-search btn ml-2 mt-1 btn-lg"><a href="https://www.geni-soft.com"></a></i>
-          </li>
+          </li>-->
 
            <li class="nav-item">
              <a href="logout.php" class="btn btn-link" style="color: rgba(255,255,255,.6);">Logout</a>
@@ -92,22 +94,73 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
   </nav>
   <!-- End Navigation -->
 
-  <a href="reset-password.php" class="btn btn-primary">Reset Your Password</a>
 
   </div>
   <!-- End Container -->
 
+
+  <div class="container">
+
+  <!-- Start Marketing Section Icons -->
+  <h2>Nos prochaines sessions</h2>
+    <br>
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <figure class="figure">
+          <img id="prochainesession1" src="../img/html5.jpg" alt="HTML5 Beginner" class="figure-img img-fluid">
+        </figure>
+        <div class="text-center">
+          <h4 id="sessionTitle1" class="nv-session">HTML5 Beginner</h4>
+          <h6 id="sessionContent1"> Nouvelle session Anglais Beginner Dimanche & Lundi 15h à 17h les inscriptions sont en cours soyez les
+            Bienvenues</h6>
+          <button class="btn my-bg-color text-white">Savoir Plus</button>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <figure class="figure">
+          <img id="prochainesession2" src="../img/css3.jpg" alt="CSS3 Beginner" class="figure-img img-fluid">
+        </figure>
+        <div class="text-center">
+          <h4 id="sessionTitle2" class="nv-session">CSS3 Beginner</h4>
+          <h6 id="sessionContent1">Nouvelle session Lundi le 16-12-2019 à 13H30. Inscriptions sont en cours. Soyez les Bienvenues , Lundi et
+            mercredi 13h30 à 16h30</h6>
+          <button class="btn my-bg-color text-white">Savoir Plus</button>
+        </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <figure class="figure">
+          <img id="prochainesession3" src="../img/js.jpg" alt="JS Beginner" class="figure-img img-fluid">
+        </figure>
+        <div class="text-center">
+          <h4 id="sessionTitle3" class="nv-session">JavaScript Beginner</h4>
+          <h6 id="sessionContent1">Nouvelle session pour débutants Samedi le 30-11-2019 à 9H les inscriptions sont
+            en cours. Soyez les Bienvenues</h6>
+          <button class="btn my-bg-color text-white">Savoir Plus</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- End Start Marketing Section Icons -->
+  </div>
+
+
   <br><br><br><br>
 
-  <!-- Footer -->
-  <footer class="py-5 my-bg-color text-center">
+   <!-- Footer -->
+   <footer class="py-5 my-bg-color text-center">
     <div class="container">
 
       <div class="btn-group btn-group-lg">
         <a class="btn btn-secondary" href="https://www.geni-soft.com" target="blank"><i class="fa fa-globe"></i></a>
-        <a class="btn my-bg-color" href="https://web.facebook.com/GeniSoftInformatique/?ref=br_rs" target="blank"><i class="fa fa-facebook"></i></a>
+        <a class="btn btn-dark" href="https://web.facebook.com/GeniSoftInformatique/?ref=br_rs" target="blank"><i class="fa fa-facebook"></i></a>
         <a class="btn btn-secondary" href="https://www.linkedin.com/company/geni-soft-informatique" target="blank"><i class="fa fa-linkedin"></i></a>
-        <a class="btn my-bg-color" href="contact.html"><i class="fa fa-phone"></i></a>
+        <a class="btn btn-dark" href="contact.html"><i class="fa fa-phone"></i></a>
         <a class="btn btn-secondary" href="contact.html"><i class="fa fa-envelope-o"></i></a>
       </div>
 
@@ -132,37 +185,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 
   <script src="js/navbar-shrinker.js"></script>
 
-  
-  <?php
-        try
-        {
-            $bdd = new PDO('mysql:host=localhost;dbname=gsef;charset=utf8', 'root', '');
-        }
-        catch(Exception $e)
-        {
-                die('Erreur : '.$e->getMessage());
-        }
 
+    <!-- <a href="reset-password.php" class="btn btn-primary">Reset Your Password</a> -->
 
-        // Récupération des 10 derniers messages
-        $reponse = $bdd->query('SELECT matricule, nom, prenom, gender, dateN, lieuN, adresse, niveauEtu, telephone, formation, email, occupation, disponibilité FROM preinscrit');
-       
-        // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
-        while ($donnees = $reponse->fetch())
-        { 
-            echo '<p><strong>' . htmlspecialchars($donnees['matricule']) . '</strong></p>';
-            echo '<p>nom:' . htmlspecialchars($donnees['nom']) . ', prenom:' . htmlspecialchars($donnees['prenom']) . ', gender:' . htmlspecialchars($donnees['gender']) . '</p>';
-            echo '<p>date de naissance:' . htmlspecialchars($donnees['dateN']) . ' à ' . htmlspecialchars($donnees['lieuN']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['adresse']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['niveauEtu']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['telephone']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['formation']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['email']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['occupation']) . '</p>';
-            echo '<p>' . htmlspecialchars($donnees['disponibilité']) . '</p>';
-        }
-        $reponse->closeCursor();
-    ?>
 </body>
 
 </html>
+          
