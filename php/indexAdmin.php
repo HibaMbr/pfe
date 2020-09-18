@@ -608,7 +608,7 @@ $(document).ready(function($)
 		<div style="padding:20px;"></div>
 	
 		<div class="panel panel-default">
-		<div class="panel-heading"><h3> Ajouter, Modifier et Supprimer les Sessions </h3> </div><br>
+		<div class="panel-heading"><h3> Table des Sessions </h3> </div><br>
 	
 		<div class="panel-body">
 			
