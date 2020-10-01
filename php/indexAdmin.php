@@ -545,7 +545,7 @@ $(document).ready(function($)
       <!-- Nav Brand -->
       <a id="logo" href="indexAdmin.php" class="navbar-brand js-scroll-trigger text-white">Geni Soft Ecole</a>
       <!-- the class navbar-brand gives the logo of our web page -->
-      <!-- <a id="logo-no-bg" href="index.html"><img src="img\GS-logo-removebg-preview"></a> -->
+      <!-- <a id="logo-no-bg" href="index.php"><img src="img\GS-logo-removebg-preview"></a> -->
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"

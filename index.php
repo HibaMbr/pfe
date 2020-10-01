@@ -27,9 +27,9 @@
     <div class="container">
 
       <!-- Nav Brand -->
-      <a id="logo" href="index.html" class="navbar-brand js-scroll-trigger text-white">Geni Soft Ecole</a>
+      <a id="logo" href="index.php" class="navbar-brand js-scroll-trigger text-white">Geni Soft Ecole</a>
       <!-- the class navbar-brand gives the logo of our web page -->
-      <!-- <a id="logo-no-bg" href="index.html"><img src="img\GS-logo-removebg-preview"></a> -->
+      <!-- <a id="logo-no-bg" href="index.php"><img src="img\GS-logo-removebg-preview"></a> -->
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -45,7 +45,7 @@
 
           <!-- ACCUEIL -->
           <li class="nav-item">
-            <a href="index.html" class="nav-link js-scroll-trigger">Accueil</a>
+            <a href="index.php" class="nav-link js-scroll-trigger">Accueil</a>
           </li>
 
           <!-- NOS FORMATIONS -->
@@ -165,44 +165,40 @@
     <!-- Start Marketing Section Icons -->
     <h2>Nos prochaines sessions</h2>
     <br>
-    <div class="row">
+    <?php
+        try
+        {
+            $bdd = new PDO('mysql:host=localhost;dbname=gsef;charset=utf8', 'root', '');
+        }
+        catch(Exception $e)
+        {
+                die('Erreur : '.$e->getMessage());
+        }
 
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <figure class="figure">
-          <img id="prochainesession" src="img/html5.jpg" alt="HTML5 Beginner" class="figure-img img-fluid">
-        </figure>
-        <div class="text-center">
-          <h4 class="nv-session">HTML5 Beginner</h4>
-          <h6> Nouvelle session Anglais Beginner Dimanche & Lundi 15h à 17h les inscriptions sont en cours soyez les
-            Bienvenues</h6>
-          <button class="btn my-bg-color text-white">Savoir Plus</button>
-        </div>
 
-      </div>
+        // Récupération des 10 derniers messages
+        $reponse = $bdd->query('SELECT fname, fdate, fhour, fhref, fimg FROM session');
+       
+        // Affichage de chaque message (toutes les données sont protégées par htmlspecialchars)
+        echo      '<div class="row">';
 
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <figure class="figure">
-          <img id="prochainesession" src="img/css3.jpg" alt="CSS3 Beginner" class="figure-img img-fluid">
-        </figure>
-        <div class="text-center">
-          <h4 class="nv-session">CSS3 Beginner</h4>
-          <h6>Nouvelle session Lundi le 16-12-2019 à 13H30. Inscriptions sont en cours. Soyez les Bienvenues , Lundi et
-            mercredi 13h30 à 16h30</h6>
-          <button class="btn my-bg-color text-white">Savoir Plus</button>
-        </div>
-
-      </div>
-
-      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
-        <figure class="figure">
-          <img id="prochainesession" src="img/js.jpg" alt="JS Beginner" class="figure-img img-fluid">
-        </figure>
-        <div class="text-center">
-          <h4 class="nv-session">JavaScript Beginner</h4>
-          <h6>Nouvelle session pour débutants Samedi le 30-11-2019 à 9H les inscriptions sont
-            en cours. Soyez les Bienvenues</h6>
-          <button class="btn my-bg-color text-white">Savoir Plus</button>
-        </div>
+        while ($donnees = $reponse->fetch())
+        {
+          echo        '<div class="col-lg-4 col-md-6 col-sm-12 mb-4">';
+          echo          '<figure class="figure">';
+          echo            '<img id="prochainesession" src="img/' . htmlspecialchars($donnees['fimg']) . '.jpg" alt="' . htmlspecialchars($donnees['fname']) . '" class="figure-img img-fluid">';
+          echo          '</figure>';
+          echo          '<div class="text-center">';
+          echo            '<h4 class="nv-session">' . htmlspecialchars($donnees['fname']) . '</h4>';
+          echo            '<h6> Nouvelle session ' . htmlspecialchars($donnees['fname']) . ' est programmé le ' . htmlspecialchars($donnees['fdate']) . ' à ' . htmlspecialchars($donnees['fhour']) . '.</h6>';
+          echo           '<br>';
+          echo            '<button class="btn my-bg-color text-white"><a style="color:white;" href="formations/' . htmlspecialchars($donnees['fhref']) . '.html">Savoir Plus</a></button>';
+          echo          '</div>';
+          echo        '</div>';
+        }
+        echo    '</div>';
+        $reponse->closeCursor();
+    ?>
 
       </div>
 

@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <body>
     <div class="login-form">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <a href="../index.html" class="close">&times;</a><br>
+            <a href="../index.php" class="close">&times;</a><br>
         
             <h2 class="text-center">Login</h2> 
 

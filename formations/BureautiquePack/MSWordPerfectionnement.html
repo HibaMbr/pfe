@@ -30,7 +30,7 @@
         <div class="container">
 
             <!-- Nav Brand -->
-            <a id="logo" href="../../index.html" class="navbar-brand text-white">Geni Soft Ecole</a>
+            <a id="logo" href="../../index.php" class="navbar-brand text-white">Geni Soft Ecole</a>
 
             <!-- Start Button -->
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -46,7 +46,7 @@
 
                     <!-- ACCUEIL -->
                     <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">Accueil</a>
+                        <a href="../../index.php" class="nav-link">Accueil</a>
                     </li>
 
                     <!-- NOS FORMATIONS -->
@@ -98,7 +98,7 @@
 
         <!-- Start Breadcrumb -->
         <ul class="breadcrumb">
-            <li class="breadcrumb-item"><a href="../../index.html">Accueil</a></li>
+            <li class="breadcrumb-item"><a href="../../index.php">Accueil</a></li>
             <li class="breadcrumb-item"><a href="../../formations.html">Formations</a></li>
             <li class="breadcrumb-item active">Bureautique Pack</li>
         </ul>
@@ -142,29 +142,306 @@
                     </ul>
                 </p>
                 <br>
-                <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#inscrModal" style=" background-color: #143B46; border: none;">Inscription</button>
-                 <!-- Modal -->
+                <button class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#inscrModal"
+                    style=" background-color: #143B46; border: none;">Inscription</button>
+                <!-- Modal -->
                 <div class="modal fade" id="inscrModal" role="dialog">
-                    <div class="modal-dialog">
-                    
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h4 class="modal-title">Inscription</h4>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-dialog modal-dialog-scrollable">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Inscription</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="POST" action="../../php/preinscrit_post.php" class="form-horizontal">
+                                    <div class="container">
+
+                                        <div class="form-group">
+                                            <label for="name" class="col-sm-2 control-label"><b>Nom: </b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="text" name="name" id="name"
+                                                    placeholder="Entez votre nom" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="lname" class="col-sm-2 control-label"><b>Prénom: </b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="text" name="lname" id="lname"
+                                                    placeholder="Entez votre prenom" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="gender" class="col-sm-2 control-label"><b>Genre:
+                                                </b></label><br>
+                                            <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
+                                                <label for="mme" class="btn btn-secondary">
+                                                    <input type="radio" name="gender" id="mme" value="mme" required checked> Mme
+                                                </label>
+                                                <label for="melle" class="btn btn-secondary">
+                                                    <input type="radio" name="gender" id="melle" value="melle"> Melle
+                                                </label>
+                                                <label for="mr" class="btn btn-secondary">
+                                                    <input type="radio" name="gender" id="mr" value="mr"> Mr
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="dn" class="col-sm-3 control-label"><b>Né(e) le: </b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="date" name="dn" id="dn" min="1970-01-01" max="2010-01-01" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="ln" class="col-sm-2 control-label"><b>à:</b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="text" name="ln" id="ln"
+                                                    placeholder="Entez votre lieu de naissance" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="adr" class="col-sm-2 control-label"><b>Adresse:</b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="text" name="adr" id="adr"
+                                                    placeholder="Entez votre adresse" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="nivoEtude" class="col-sm-5 control-label"><b>Niveau
+                                                    d'étude:</b></label><br>
+                                                    
+                                                <div class="btn-group btn-group-toggle col-sm-12" data-toggle="buttons">
+                                                    <label for="primaire" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="primaire" value="primaire"
+                                                            onclick="fermer()" checked required> primaire
+                                                    </label>
+                                                    <label for="moyen" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="moyen" value="moyen"
+                                                            onclick="fermer()"> moyen
+                                                    </label>
+                                                    <label for="lycée" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="lycée" value="lycée"
+                                                            onclick="fermer()"> lycée
+                                                    </label>
+                                                    <label for="université" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="université" value="université"
+                                                            onclick="fermer()"> université
+                                                    </label>
+                                                </div>
+                                                <div class="btn-group btn-group-toggle col-sm-12">
+                                                    <label for="autre" class="btn btn-secondary">
+                                                        <input type="radio" name="nivoEtude" id="autre" value="autre"
+                                                            onclick="afficher()"> autre
+                                                    </label>
+                                                    <input class="form-control" type="text" name="autre" id="autreN"
+                                                        style="display: none;" placeholder="Autre ...">
+                                                </div> 
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="tlf" class="col-sm-2 control-label"><b>Téléphone:</b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="tel" name="tlf" id="tl"
+                                                    placeholder="Format: 0[5/6/7]********"
+                                                    pattern="[0]{1}[567]{1}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="type" class="col-sm-5 control-label"><b>Type de
+                                                    formation:</b></label>
+                                            <div class="input-group col-sm-12">
+                                                <select class="custom-select" name="type" id="type">
+                                                    <optgroup label="Bureautique pack">
+                                                        <option value="Windows Initiation">Windows Initiation
+                                                        </option>
+                                                        <option value="MS Word initiation">MS Word initiation</option>
+                                                        <option value="MS Excel Initiation">MS Excel Initiation</option>
+                                                        <option value="MS Word perfectionnement" selected>MS Word
+                                                            perfectionnement</option>
+                                                        <option value="MS Excel perfectionnement">MS Excel
+                                                            perfectionnement</option>
+                                                        <option value="MS Power Point">MS Power Point</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Développement">
+                                                        <option value="PHP">PHP</option>
+                                                        <option value="MySQL">MySQL</option>
+                                                        <option value="CSS">CSS</option>
+                                                        <option value="HTML">HTML</option>
+                                                        <option value="JavaScript">JavaScript</option>
+                                                        <option value="Java">Java</option>
+                                                        <option value="C">C</option>
+                                                        <option value="Delphi">Delphi</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Microsoft servers">
+                                                        <option value="Windows server">Windows server</option>
+                                                        <option value="SQL Server">SQL Server</option>
+                                                        <option value="Exchange Server">Exchange Server</option>
+                                                        <option value="ISA server / Forefront TMG">ISA server /
+                                                            Forefront TMG</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Microsoft Office">
+                                                        <option value="MS Word initiation">MS Word initiation</option>
+                                                        <option value="MS Word perfectionnement">MS Word
+                                                            perfectionnement</option>
+                                                        <option value="MS Excel Niveau 1">MS Excel Niveau 1</option>
+                                                        <option value="MS Excel Niveau 2">MS Excel Niveau 2</option>
+                                                        <option value="MS Excel Niveau 3">MS Excel Niveau 3</option>
+                                                        <option value="VBA Excel">VBA Excel</option>
+                                                        <option value="MS Access initiation">MS Access initiation
+                                                        </option>
+                                                        <option value="MS Access perfectionnement">MS Access
+                                                            perfectionnement</option>
+                                                        <option value="MS Power Point">MS Power Point</option>
+                                                        <option value="MS Outlook">MS Outlook</option>
+                                                        <option value="MS Visio">MS Visio</option>
+                                                        <option value="MS Project">MS Project</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Logiciels d'architecture DAO">
+                                                        <option value="Autocad 2D">Autocad 2D</option>
+                                                        <option value="Autocad 3D">Autocad 3D</option>
+                                                        <option value="Sketchup">Sketchup</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Infographie">
+                                                        <option value="Photoshop">Photoshop</option>
+                                                        <option value="In Design">In Design</option>
+                                                        <option value="Illustrator">Illustrator</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Langues">
+                                                        <option value="Anglais américain">Anglais américain</option>
+                                                        <option value="Français">Français</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Autre">
+                                                        <option value="Formation Réseaux">Formation Réseaux</option>
+                                                        <option value="Formation Maintenance PC">Formation Maintenance
+                                                            PC</option>
+                                                    </optgroup>
+
+                                                    <optgroup label="Formation Diplomantes">
+                                                        <option value="TS en Informatique option SI">TS en Informatique
+                                                            option SI</option>
+                                                        <option value="Exploitant Informatique">Exploitant Informatique
+                                                        </option>
+                                                    </optgroup>
+
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="mail" class="col-sm-3 control-label"><b>E-mail:</b></label>
+                                            <div class="col-sm-12">
+                                                <input class="form-control" type="email" name="mail" id="mail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                                    placeholder="Entez votre adresse e-mail" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="occup"
+                                                class="col-sm-2 control-label"><b>Occupations:</b></label>
+                                            <div class="col-sm-12">
+                                                <textarea class="form-control" name="occup" cols="40" rows="5"
+                                                    placeholder="Entez votre occupation" required></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="dispo"
+                                                class="col-sm-2 control-label"><b>Disponibilité:</b></label>
+                                            <div class="col-sm-12">
+                                                <table class="col-sm-12" required>
+                                                    <tr>
+                                                        <th> </th>
+                                                        <th>Sam</th>
+                                                        <th>Dim</th>
+                                                        <th>Lun</th>
+                                                        <th>Mar</th>
+                                                        <th>Mer</th>
+                                                        <th>Jeu</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>09h00-12h00</td>
+                                                        <td><input type="checkbox" name="dispo[]" value="sam_9"
+                                                                id="s9"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="dim_9"
+                                                                id="d9"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="lun_9"
+                                                                id="l9"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="mar_9"
+                                                                id="ma9"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="mer_9"
+                                                                id="me9"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="jeu_9"
+                                                                id="j9"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13h30-16h30</td>
+                                                        <td><input type="checkbox" name="dispo[]" value="sam_13:30"
+                                                                id="s1_3"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="dim_13:30"
+                                                                id="d1_3"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="lun_13:30"
+                                                                id="l1_3"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="mar_13:30"
+                                                                id="ma1_3"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="mer_13:30"
+                                                                id="me1_3"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="jeu_13:30"
+                                                                id="j1_3"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17h00-19h00</td>
+                                                        <td><input type="checkbox" name="dispo[]" value="sam_17"
+                                                                id="s5"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="dima_17"
+                                                                id="d5"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="lun_17"
+                                                                id="l5"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="mar_17"
+                                                                id="ma5"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="mer_17:00"
+                                                                id="me5"></td>
+                                                        <td><input type="checkbox" name="dispo[]" value="jeu_17:00"
+                                                                id="j5"></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-sm-12">
+                                            <button type="submit" name="submit"
+                                                class="btn btn-secondary col-sm-5">Submit</button>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <button type="reset" class="btn btn-secondary col-sm-5">Reset</button>
+                                        </div>
+
+
+                                    </div>
+                                </form>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                        <p>form d'inscription.</p>
-                        </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    
+
                     </div>
                 </div>
             </div>
-
         </div>
 
         <br><br>
